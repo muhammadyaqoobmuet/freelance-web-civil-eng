@@ -6,6 +6,7 @@ import { About } from "@/components/About"
 import { Projects } from "@/components/Projects"
 import { Education } from "@/components/Education"
 import { Experience } from "@/components/Experience"
+import { Certificates } from "@/components/Certificates"
 import { Contact } from "@/components/Contact"
 import { Footer } from "@/components/Footer"
 import { useEffect } from "react"
@@ -41,6 +42,7 @@ export default function Home() {
         <Projects />
         <Education />
         <Experience />
+        <Certificates />
         <Contact />
       </main>
       <Footer />

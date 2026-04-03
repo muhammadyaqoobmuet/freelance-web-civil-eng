@@ -1,78 +1,133 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Scroll, ExternalLink, GraduationCap } from "lucide-react"
+import React, { useRef, useState, useEffect } from "react"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { Award, ExternalLink, Sparkles, Binary, Globe } from "lucide-react"
 
-const certs = [
-  { title: "Professional Engineer (PE) License", issuer: "Engineering Council", date: "2025" },
-  { title: "Advanced Structural Analysis", issuer: "Coursera / Stanford", date: "2024" },
-  { title: "AutoCAD Expert Certification", issuer: "Autodesk", date: "2023" }
-]
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-const courses = [
-  { title: "Seismic Design of Buildings", provider: "EDX / MIT", year: "2024" },
-  { title: "Concrete Technology & Mix Design", provider: "NPTEL", year: "2023" },
-  { title: "Project Management for Civil Engineers", provider: "Udemy", year: "2023" }
+const certifications = [
+  {
+    title: "4th International Conference on Sustainable Development in Civil Engineering (ICSDC-25)",
+    issuer: "Mehran University of Engineering & Technology, Jamshoro",
+    date: "Dec 17–19, 2025",
+    image: "https://media.licdn.com/dms/image/v2/D4D2DAQFJ7sCOEmqy2w/profile-treasury-image-shrink_800_800/B4DZ1DpoOwJMAY-/0/1774956504761?e=1775844000&v=beta&t=0XRVOQDJlu3sA1AD7gvCHPnC96XaBkUyIEs44293ZJc",
+    desc: "Participated in global discussions on sustainable infrastructure, emerging engineering practices, and research developments. This conference significantly enhanced my understanding of future-ready structural solutions.",
+    tags: ["Sustainability", "Infrastructure", "Research"],
+    icon: Globe
+  },
+  {
+    title: "Digital Skills & Entrepreneurship Seminar",
+    issuer: "ASCE-MUET Student Chapter",
+    date: "2024",
+    image: "https://media.licdn.com/dms/image/v2/D4D2DAQGvtJ6WaQGz0A/profile-treasury-image-shrink_800_800/B4DZ1Dsk2kI0AY-/0/1774957258447?e=1775844000&v=beta&t=yIAlp85aeqCerx6o-oD_hUYl2Bj6POjzdcA5lnf9cOI",
+    desc: "Focused on strategic management, SME development, and digital monetization. Enhanced professional outlook, communication, and innovation skills for forward-thinking engineering practice.",
+    tags: ["Entrepreneurship", "Digital", "Innovation"],
+    icon: Binary
+  }
 ]
 
 export function Certificates() {
-  return (
-    <section id="certificates" className="py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Certificates */}
-          <div>
-            <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
-              <Scroll className="text-primary w-8 h-8" />
-              CERTIFICATIONS
-            </h2>
-            <div className="space-y-4">
-              {certs.map((cert, i) => (
-                <motion.div
-                  key={cert.title}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-4 bg-background border border-border flex items-center justify-between group hover:border-primary transition-colors"
-                >
-                  <div>
-                    <h3 className="font-bold">{cert.title}</h3>
-                    <p className="text-xs text-secondary font-mono">{cert.issuer} • {cert.date}</p>
-                  </div>
-                  <ExternalLink className="w-4 h-4 text-secondary/40 group-hover:text-primary transition-colors cursor-pointer" />
-                </motion.div>
-              ))}
-            </div>
-          </div>
+  const container = useRef<HTMLDivElement>(null)
+  const [mounted, setMounted] = useState(false)
 
-          {/* Courses */}
-          <div>
-            <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
-              <GraduationCap className="text-accent w-8 h-8" />
-              COURSES
-            </h2>
-            <div className="grid grid-cols-1 gap-4">
-              {courses.map((course, i) => (
-                <motion.div
-                  key={course.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-4 bg-background border border-border flex items-center gap-4 hover:border-accent transition-colors"
-                >
-                   <div className="w-10 h-10 rounded bg-accent/10 flex items-center justify-center shrink-0">
-                      <GraduationCap className="w-5 h-5 text-accent" />
-                   </div>
-                   <div>
-                      <h3 className="font-bold text-sm">{course.title}</h3>
-                      <p className="text-[10px] text-secondary font-mono uppercase tracking-wider">{course.provider} | {course.year}</p>
-                   </div>
-                </motion.div>
-              ))}
-            </div>
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true)
+    setTimeout(() => {
+      ScrollTrigger.refresh()
+    }, 500)
+  }, [])
+
+  useGSAP(() => {
+    if (!mounted) return
+
+    gsap.from(".cert-card", {
+      y: 20,
+      duration: 1,
+      stagger: 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".certs-grid",
+        start: "top 95%",
+        toggleActions: "play none none reverse"
+      }
+    })
+  }, { scope: container, dependencies: [mounted] })
+
+  if (!mounted) return null
+
+  return (
+    <section id="certificates" ref={container} className="py-24 px-6 relative bg-background/50">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-16 space-y-4 text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+            <Award className="w-3 h-3" />
+            Technical Validation
           </div>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-[0.9]">
+            Academic <br /> <span className="font-serif italic font-light lowercase opacity-30">Recognition.</span>
+          </h2>
+        </div>
+
+        <div className="certs-grid grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {certifications.map((cert, i) => (
+            <div
+              key={i}
+              className="cert-card group relative bg-muted/40 dark:bg-zinc-900/40 border border-foreground/10 rounded-[1.5rem] p-8 md:p-10 transition-all duration-500 hover:border-foreground/20 overflow-hidden"
+            >
+              <div className="relative z-10 space-y-6">
+                <div className="flex items-start justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-foreground/5 flex items-center justify-center">
+                    <cert.icon className="w-5 h-5 opacity-40" />
+                  </div>
+                  <div className="text-[9px] font-mono uppercase tracking-widest opacity-40">
+                    Ref: MUET_CERT_{2025 - i}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl md:text-2xl font-black tracking-tighter leading-tight uppercase">
+                    {cert.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-[9px] font-mono opacity-40">
+                    <Sparkles className="w-3 h-3" />
+                    {cert.issuer} {"//"} {cert.date}
+                  </div>
+                </div>
+
+                <p className="text-xs leading-relaxed opacity-60 line-clamp-3">
+                  {cert.desc}
+                </p>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {cert.tags.map(tag => (
+                    <span key={tag} className="px-2 py-0.5 border border-foreground/10 rounded-full text-[7px] font-mono uppercase tracking-widest opacity-60">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="pt-6 border-t border-foreground/5 flex items-center justify-between">
+                  <a
+                    href={cert.image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.2em] text-foreground font-bold hover:underline"
+                  >
+                    View Certificate <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Decorative Subtle Grid */}
+              <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:16px_16px]" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

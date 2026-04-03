@@ -69,7 +69,7 @@ export function Hero() {
         </h1>
 
         <p ref={subRef} className="text-lg md:text-xl text-secondary max-w-xl mx-auto mb-10 leading-relaxed font-light">
-          Structural Civil Engineer specializing in <span className="text-foreground font-medium underline underline-offset-4 decoration-border/50">resilient infrastructure</span> and innovative computational design.
+           Civil Engineer specializing in <span className="text-foreground font-medium underline underline-offset-4 decoration-border/50">resilient infrastructure</span> and innovative computational design.
         </p>
 
         <div ref={btnRef} className="flex flex-col sm:flex-row items-center justify-center gap-5">

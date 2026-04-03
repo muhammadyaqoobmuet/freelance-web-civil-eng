@@ -2,84 +2,110 @@
 
 import React, { useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import { ArrowLeft, ArrowUpRight } from "lucide-react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import { projects } from "@/lib/data"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 
-gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function ProjectsPage() {
   const container = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } })
-
-    tl.from(".archive-header", { y: 50, opacity: 0 })
-      .from(".archive-item", {
-        opacity: 0,
-        y: 20,
-        stagger: 0.1,
-        clearProps: "all"
-      }, "-=0.8")
+    gsap.from(".archive-header", { y: 30, opacity: 0, duration: 1, ease: "power3.out" })
+    gsap.from(".proj-card", {
+      y: 24,
+      stagger: 0.1,
+      duration: 0.9,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".proj-grid", start: "top 90%" }
+    })
   }, { scope: container })
 
   return (
     <div ref={container} className="bg-background min-h-screen text-foreground">
       <Navbar />
 
-      <main className="pt-48 pb-32 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="archive-header space-y-12 mb-24">
-            <Link href="/" className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest font-bold hover:underline transition-all group">
-              <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> Dashboard
+      <main className="pt-36 pb-32">
+        <div className="max-w-5xl mx-auto px-6">
+
+          {/* Header */}
+          <div className="archive-header space-y-8 mb-14">
+            <Link href="/" className="inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary hover:text-foreground transition-all group">
+              <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> Home
             </Link>
-
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pt-8 border-t border-foreground/10">
-              <div className="space-y-4">
-                <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] uppercase">
-                  Project <br /> <span className="font-serif italic font-light opacity-40">Archive.</span>
-                </h1>
-              </div>
+            <div className="space-y-3">
+              <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">Portfolio</p>
+              <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.9]">
+                Project<br />
+                <span className="font-serif italic font-light normal-case opacity-30 text-3xl md:text-5xl">Archive.</span>
+              </h1>
             </div>
           </div>
 
-          <div className="space-y-4">
-            <div className="flex items-center justify-between px-8 py-5 bg-foreground text-background rounded-t-3xl font-mono text-[10px] uppercase tracking-[0.3em] font-bold">
-              <span className="flex-1">Title // Technical Context</span>
-              <span className="hidden md:block w-40">Category</span>
-              <span className="hidden md:block w-24 text-right">Year</span>
-              <span className="w-12 text-right">Open</span>
-            </div>
+          {/* Grid */}
+          <div className="proj-grid grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {projects.map((project, i) => (
+              <Link
+                key={project.slug}
+                href={`/projects/${project.slug}`}
+                className="proj-card group block rounded-2xl border border-foreground/10 bg-muted/20 dark:bg-zinc-900/30 overflow-hidden hover:border-foreground/20 transition-all duration-300"
+              >
+                {/* Full-width image */}
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted">
+                  <Image
+                    src={project.images[0]}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={i < 2}
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300" />
+                </div>
 
-            <div className="divide-y divide-foreground/5 border-x border-b border-foreground/10 rounded-b-3xl overflow-hidden bg-background">
-              {projects.map((project) => (
-                <Link
-                  key={project.slug}
-                  href={`/projects/${project.slug}`}
-                  className="archive-item flex items-center justify-between px-8 py-12 hover:bg-muted group transition-all duration-300"
-                >
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold group-hover:translate-x-2 transition-transform duration-500 uppercase tracking-tight">
+                {/* Info */}
+                <div className="p-6 space-y-4">
+                  <div>
+                    <p className="text-[9px] font-mono uppercase tracking-widest text-secondary opacity-50 mb-1">
+                      {project.category} · {project.year}
+                    </p>
+                    <h2 className="text-lg md:text-xl font-black tracking-tight uppercase leading-tight">
                       {project.title}
-                    </h3>
-                    <p className="text-sm opacity-60 mt-2 font-medium">{project.description}</p>
+                    </h2>
                   </div>
-                  <div className="hidden md:block w-40 text-xs font-mono uppercase tracking-[0.2em] opacity-40">
-                    {project.category}
+
+                  <p className="text-xs text-secondary leading-relaxed line-clamp-2 opacity-70">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="text-[8px] font-mono px-2 py-0.5 border border-foreground/10 rounded-full text-secondary">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <div className="hidden md:block w-24 text-right text-xs font-mono opacity-40 font-bold">
-                    {project.year}
+
+                  <div className="flex items-center justify-between pt-3 border-t border-foreground/5">
+                    <span className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-widest opacity-40">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 opacity-80" />
+                      All Systems Operational
+                    </span>
+                    <span className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase tracking-widest group-hover:gap-2 transition-all duration-200">
+                      View Project <ArrowRight className="w-3 h-3" />
+                    </span>
                   </div>
-                  <div className="w-12 text-right">
-                    <ArrowUpRight className="w-6 h-6 opacity-20 group-hover:opacity-100 group-hover:scale-125 transition-all text-foreground" />
-                  </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+              </Link>
+            ))}
           </div>
+
         </div>
       </main>
 
