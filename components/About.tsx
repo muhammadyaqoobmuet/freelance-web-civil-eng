@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useRef } from "react"
+import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -49,38 +50,37 @@ export function About() {
 
           <div className="space-y-6">
             <p className="text-xl text-secondary leading-relaxed font-light">
-              As a Civil engineer, my work exists at the intersection of <span className="text-foreground font-medium">mathematical precision</span> and <span className="font-serif italic text-foreground/80">architectural vision</span>.
+              I am a passionate Civil Engineer with a strong academic background and a commitment to excellence in engineering and infrastructure development.
             </p>
             <p className="text-secondary leading-relaxed">
-              Based in Hyderabad, I specialize in the analysis and design of complex structures—ranging from seismic-resistant high-rises to sustainable infrastructure. My mission is to build foundations that are not only structurally sound but inherently resilient for the generations to come.
+              Currently associated with Mehran University of Engineering and Technology (MUET), Jamshoro, I am dedicated to enhancing my technical knowledge and practical skills in the field of civil engineering. 🎓
+            </p>
+            <p className="text-secondary leading-relaxed">
+              With a multidisciplinary educational background spanning civil and electrical engineering, I approach engineering challenges with innovative and practical solutions. My core interests include <span className="text-foreground font-medium">infrastructure development, highway engineering, construction management</span>, and <span className="text-foreground font-medium">sustainable engineering practices</span>.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border">
-            <div className="space-y-2">
+          <div className="pt-8 border-t border-border">
+            <div className="space-y-3">
               <div className="flex items-center gap-2 font-bold text-sm uppercase tracking-tighter">
-                <Target className="w-4 h-4" /> Goal
+                <Target className="w-4 h-4" /> Career Objective
               </div>
-              <p className="text-xs text-secondary leading-relaxed">Zero-deviation structural integrity in every calculation.</p>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 font-bold text-sm uppercase tracking-tighter">
-                <Zap className="w-4 h-4" /> Focus
-              </div>
-              <p className="text-xs text-secondary leading-relaxed">Optimization of materials and safety protocols.</p>
+              <p className="text-sm text-secondary leading-relaxed">
+                To grow as a professional civil engineer by contributing to modern infrastructure projects, applying technical expertise, and delivering efficient, reliable, and sustainable engineering solutions. I aim to continuously learn, innovate, and make a positive impact in the engineering field.
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="about-image relative aspect-[4/5] bg-muted rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-          {/* Placeholder for high quality image */}
-          <div className="absolute inset-8 border border-border border-dashed rounded-2xl flex items-center justify-center font-mono text-[10px] text-secondary/30">
-            HIGH_QUALITY_PORTRAIT [1200x1500]
-          </div>
-          <div className="absolute bottom-12 left-12 right-12 p-8 glass border border-white/10 rounded-2xl space-y-2">
-            <p className="text-xs font-mono uppercase tracking-widest text-secondary">Currently Operating At</p>
-            <h4 className="font-bold text-lg">STRUCTURAL DESIGN HUB</h4>
-          </div>
+        <div className="about-image relative aspect-4/5 bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden  transition-all duration-700 border border-foreground/10">
+          <Image
+            src="https://p24ni3hvmk.ufs.sh/f/m659gJRPXyqfKjrGEhVPCIlWtqi7XvRbuJApDKeHd1nm6GzU"
+            alt="Arslan Javed Jamali - Civil Engineer"
+            fill
+            className="object-cover mix-blend-multiply dark:mix-blend-normal"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
         </div>
       </div>
     </section>

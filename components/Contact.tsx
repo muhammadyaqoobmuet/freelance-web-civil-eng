@@ -75,15 +75,26 @@ export function Contact() {
                 Open for structural consultations, project collaborations, and professional engineering inquiries.
               </p>
 
-              <div className="space-y-6">
-                <p className="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40">Direct Inquiry</p>
-                <a
-                  href="mailto:hi@arslan.com"
-                  className="group/link inline-flex items-center gap-4 text-3xl md:text-4xl font-bold tracking-tighter hover:opacity-70 transition-all duration-500"
-                >
-                  hi@arslan.com
-                  <ArrowUpRight className="w-8 h-8 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
-                </a>
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40">Direct Inquiry</p>
+                  <div className="flex flex-col gap-2">
+                    <a href="mailto:arslanjamali112@gmail.com" className="group/link flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tighter hover:opacity-70 transition-all duration-300">
+                      arslanjamali112@gmail.com <ArrowUpRight className="w-5 h-5 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                    </a>
+                    <a href="mailto:arsaljaved112@gmail.com" className="group/link flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tighter hover:opacity-70 transition-all duration-300">
+                      arsaljaved112@gmail.com <ArrowUpRight className="w-5 h-5 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40">Phone</p>
+                  <div className="flex flex-col gap-2 font-mono text-sm md:text-base font-bold opacity-80">
+                    <p>+92 305 2906776</p>
+                    <p>+92 341 3411027</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -94,9 +105,9 @@ export function Contact() {
                     <Globe className="w-3 h-3" /> Connect
                   </p>
                   <div className="flex flex-col gap-2 font-bold text-sm tracking-tight">
-                    <a href="#" className="hover:opacity-40 transition-opacity">LinkedIn</a>
-                    <a href="#" className="hover:opacity-40 transition-opacity">Twitter / X</a>
-                    <a href="#" className="hover:opacity-40 transition-opacity">Behance</a>
+                    <a href="https://www.linkedin.com/in/arslan-javed-jamali-448744280/" target="_blank" rel="noopener noreferrer" className="hover:opacity-40 transition-opacity">LinkedIn</a>
+                    <a href="#" className="hover:opacity-40 transition-opacity">Facebook (Arsalan Javed)</a>
+                    <a href="#" className="hover:opacity-40 transition-opacity">Instagram (@arslan_javed_stoic)</a>
                   </div>
                 </div>
 
