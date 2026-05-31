@@ -12,6 +12,13 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 export function About() {
   const container = useRef<HTMLDivElement>(null)
 
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh()
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   useGSAP(() => {
     gsap.from(".about-content", {
       opacity: 0,

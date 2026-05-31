@@ -1,62 +1,118 @@
 export const projects = [
   {
-    title: "Centennial Bridge Overhaul",
-    slug: "centennial-bridge",
-    category: "Infrastructure",
+    title: "COMPARATIVE STRUCTURAL PERFORMANCE EVALUATION OF SHEAR WALL, CORE, OUTRIGGER, DIAGRID, AND HYBRID SYSTEM IN TALL BUILDING BY USING ETABS",
+    slug: "tall-building-performance",
+    category: "Structural Analysis",
     year: "2024",
-    description: "Multi-modal suspension bridge overhaul using carbon-fiber reinforced polymers and advanced seismic dampers.",
-    longDescription: "The Centennial Bridge project involved a comprehensive structural overhaul of a 50-year-old suspension bridge. Our team implemented cutting-edge carbon-fiber reinforced polymers (CFRP) to strengthen the main cables while reducing dead load. Additionally, we installed high-performance seismic dampers at the pylon bases, increasing the structure's resilience to magnitude 8.0 events by 35%.",
-    tags: ["AutoCAD", "SAP2000", "CFRP", "Seismic"],
-    images: ["/projects/bridge_project_jpg_1775225817570.png"]
-  },
-  {
-    title: "Skyline Exoskeleton Tower",
-    slug: "skyline-tower",
-    category: "High-Rise",
-    year: "2023",
-    description: "45-story commercial tower featuring a revolutionary external steel exoskeleton for maximum floor plate flexibility.",
-    longDescription: "The Skyline Tower redefines urban density with its innovative exoskeleton design. By shifting the primary structural load to the exterior steel lattice, we eliminated the need for many interior columns, providing 20% more usable floor area. The project utilized advanced BIM coordination to manage the complex geometry of the steel intersections.",
-    tags: ["ETABS", "BIM", "Steel Design", "Wind Analysis"],
+    description: "In-depth comparative study of various lateral load resisting systems for vertical structures using computational modeling.",
+    longDescription: "This research project involved the modeling and analysis of a 60-story building using ETABS. We evaluated the seismic and wind performance of five distinct structural systems: Shear Wall, Core-only, Outrigger, Diagrid, and Hybrid systems. The study quantified floor accelerations, lateral drift, and structural weight efficiency, providing a matrix for selecting the optimal system based on height-to-width ratios.",
+    tags: ["ETABS", "Structural Analysis", "Tall Buildings", "Seismic Design"],
     images: ["/projects/skyscraper_structure_jpg_1775225893194.png"]
   },
   {
-    title: "Eco-Industrial Logistics Hub",
-    slug: "eco-industrial-hub",
-    category: "Industrial",
+    title: "Quantity Surveying and Estimation of (30ft × 45ft) Residential Building",
+    slug: "qs-30x45",
+    category: "Quantity Surveying",
     year: "2023",
-    description: "Sustainable warehouse design with a long-span lightweight truss system and green energy integration.",
-    longDescription: "This 200,000 sq. ft. logistics hub features a unique long-span truss system that reduces steel weight by 12% compared to traditional designs. The roof is optimized for a massive 2MW photovoltaic array, and the polished concrete floors use a recycled aggregate mix, significantly lowering the project's carbon footprint.",
-    tags: ["Lightweight Steel", "Sustainability", "Civil 3D"],
+    description: "Detailed material take-offs and cost estimation for a medium-scale residential project.",
+    longDescription: "Comprehensive quantity surveying involving excavation, PCC, RCC, masonry, and finishing works for a 1350 sq. ft. build-up area. Developed detailed BOQs and cost analysis reports.",
+    tags: ["Project Estimation", "BOQ", "Material Take-off"],
     images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
   },
   {
-    title: "Aura Olympic Stadium Roof",
-    slug: "aura-stadium",
-    category: "Specialized",
-    year: "2024",
-    description: "Intricately engineered translucent membrane roof supported by a complex geometric steel web.",
-    longDescription: "The Aura Stadium's roof is a masterpiece of geometric engineering. The design utilizes a tensegrity-inspired steel web that supports an ETFE translucent membrane. This allows for natural light while providing full weather protection. The structure was analyzed for extreme wind loads and thermal expansion across its 300-meter span.",
-    tags: ["Rhino/Grasshopper", "Non-Linear Analysis", "ETFE"],
-    images: ["/projects/stadium_roof_jpg_1775226116520.png"]
+    title: "Quantity Surveying and Estimation of (40ft × 50ft) Residential Building",
+    slug: "qs-40x50",
+    category: "Quantity Surveying",
+    year: "2023",
+    description: "Technical estimation and budgeting for a 2000 sq. ft. residential unit.",
+    longDescription: "Detailed estimation of structural and architectural components, including rebar scheduling and finishing material optimization for a standard residential plot.",
+    tags: ["Estimation", "Budgeting", "Civil Engineering"],
+    images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
   },
   {
-    title: "Grand Canyon Hydro-Dam",
-    slug: "hydro-dam",
+    title: "Quantity Surveying and Estimation of (50ft × 100ft) Residential Building",
+    slug: "qs-50x100",
+    category: "Quantity Surveying",
+    year: "2024",
+    description: "Large-scale residential estimation focusing on high-end structural finishes.",
+    longDescription: "Project management and financial planning for a luxury residential build, involving complex foundation work and premium material specifications.",
+    tags: ["Large Scale", "QS", "Project Management"],
+    images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
+  },
+  {
+    title: "Quantity Surveying and Estimation of (100ft × 100ft) Residential Building",
+    slug: "qs-100x100",
+    category: "Quantity Surveying",
+    year: "2024",
+    description: "Massive residential complex estimation including site development and landscape budgeting.",
+    longDescription: "A comprehensive look at a 10,000 sq. ft. footprint residential project, highlighting the logistical challenges in material procurement and structural volume management.",
+    tags: ["Commercial Scale", "Urban Planning", "Financial Analysis"],
+    images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
+  },
+  {
+    title: "Belt and Road Initiative (BRI) Feasibility Study",
+    slug: "bri-feasibility",
+    category: "Research / Feasibility",
+    year: "2023",
+    description: "Geopolitical and engineering feasibility assessment of BRI corridors in the regional context.",
+    longDescription: "An analytical study on the infrastructure impact of the Belt and Road Initiative, focusing on transportation networks, economic nodes, and long-term structural sustainability of the proposed routes.",
+    tags: ["Feasibility", "BRI", "Infrastructure Planning"],
+    images: ["/projects/bridge_project_jpg_1775225817570.png"]
+  },
+  {
+    title: "Specifications and Bill of Quantities (BOQ) of BRI Infrastructure Project - Bin Qasim Power Plant Karachi",
+    slug: "boq-bin-qasim",
     category: "Infrastructure",
-    year: "2022",
-    description: "Massive concrete arch-gravity dam optimized for maximum structural efficiency and hydraulic throughput.",
-    longDescription: "The Grand Canyon Hydro-Dam project required precise structural modeling of concrete mass behaviors under extreme hydraulic pressure. Using finite element analysis (FEA), we optimized the arch-gravity profile to minimize concrete volume while exceeding safety factors. The spillway system was redesigned for 500-year flood events.",
-    tags: ["FEA", "Hydraulics", "Concrete Design"],
+    year: "2024",
+    description: "Technical documentation and cost scheduling for a major 1320 MW power project.",
+    longDescription: "Developed detailed technical specifications and BOQs for the structural components of the Bin Qasim power plant, ensuring compliance with international BRI engineering standards.",
+    tags: ["BOQ", "Power Plant", "Standardization"],
     images: ["/projects/dam_engineering_jpg_1775226169494.png"]
   },
   {
-    title: "Advanced BIM Structural Matrix",
-    slug: "bim-structural-matrix",
-    category: "Computational",
+    title: "End User Satisfaction Assessment of (BRI)",
+    slug: "bri-user-satisfaction",
+    category: "Research",
     year: "2024",
-    description: "Digital twin and BIM integration for a multi-use complex, synchronizing steel and concrete systems.",
-    longDescription: "This project showcases the power of integrated BIM. We developed a comprehensive 'Structural Matrix'—a digital twin that synchronizes the steel exoskeleton with the primary concrete shear walls. This allowed for real-time conflict resolution and optimized the placement of MEP systems within the structural frame.",
-    tags: ["Revit", "Digital Twin", "Computational Design"],
-    images: ["/projects/bim_modeling_jpg_1775226256754.png"]
+    description: "Post-occupancy and utility evaluation of infrastructure projects under the BRI framework.",
+    longDescription: "Sociotechnical research project evaluating how completed infrastructure projects meet the functional needs of the end-users and local communities in the BRI corridor.",
+    tags: ["Assessment", "User Experience", "Infrastructure"],
+    images: ["/projects/bridge_project_jpg_1775225817570.png"]
+  },
+  {
+    title: "PC-1 PERFORMA Feasibility study for the development of 1320 MW coal fired power plant at Bin Qasim industrial zone Karachi",
+    slug: "pc1-power-plant",
+    category: "Feasibility / Govt",
+    year: "2023",
+    description: "Official government planning document for technical and financial project approval.",
+    longDescription: "Comprehensive PC-1 Performa development involving technical design parameters, cost estimates, human resource requirements, and environmental impact assessments for a coal-fired power plant.",
+    tags: ["PC-1", "Govt Planning", "Feasibility"],
+    images: ["/projects/dam_engineering_jpg_1775226169494.png"]
+  },
+  {
+    title: "PC-2 PERFORMA Feasibility study for the development of 1320 MW coal fired power plant at Bin Qasim industrial zone Karachi",
+    slug: "pc2-power-plant",
+    category: "Feasibility / Govt",
+    year: "2024",
+    description: "Detailed investigation and survey phase documentation for project inception.",
+    longDescription: "Focused on the survey and institutional phase of the power plant development, outlining the necessary investigations and preliminary design works required before execution.",
+    tags: ["PC-2", "Project Survey", "Industrial Zone"],
+    images: ["/projects/dam_engineering_jpg_1775226169494.png"]
+  },
+  {
+    title: "Different Structural Elements",
+    slug: "structural-elements",
+    category: "Structural Design",
+    year: "2024",
+    description: "A collection of specialized structural component designs and analyses.",
+    longDescription: "This module contains detailed analyses and design reports for various individual structural elements, optimized for specific load conditions and architectural requirements.",
+    tags: ["Design Portfolio", "Sub-Projects", "Engineering Detailing"],
+    images: ["/projects/bim_modeling_jpg_1775226256754.png"],
+    subProjects: [
+      { id: "beam", title: "Single Span Beam Design", desc: "Detailed reinforcement and shear analysis." },
+      { id: "column", title: "Circular Column Analysis", desc: "Slenderness ratio and buckling evaluation." },
+      { id: "slab", title: "Two-Way Slab Detailing", desc: "Deflection control and reinforcement patterns." },
+      { id: "footing", title: "Isolated Footing Design", desc: "Bearing capacity and settlement analysis." }
+    ]
   }
 ];

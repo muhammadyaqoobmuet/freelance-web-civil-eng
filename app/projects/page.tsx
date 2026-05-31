@@ -75,7 +75,7 @@ export default function ProjectsPage() {
                     <p className="text-[9px] font-mono uppercase tracking-widest text-secondary opacity-50 mb-1">
                       {project.category} · {project.year}
                     </p>
-                    <h2 className="text-lg md:text-xl font-black tracking-tight uppercase leading-tight">
+                    <h2 className="text-lg md:text-xl font-black tracking-tight uppercase leading-tight line-clamp-2">
                       {project.title}
                     </h2>
                   </div>

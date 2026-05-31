@@ -3,16 +3,22 @@
 import React, { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import Link from "next/link"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { DraftingCompass, Ruler, Construction, HardHat, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export function Hero() {
   const container = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subRef = useRef<HTMLParagraphElement>(null)
   const btnRef = useRef<HTMLDivElement>(null)
+
+  React.useEffect(() => {
+    ScrollTrigger.refresh()
+  }, [])
 
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } })
@@ -73,11 +79,13 @@ export function Hero() {
         </p>
 
         <div ref={btnRef} className="flex flex-col sm:flex-row items-center justify-center gap-5">
-          <button className="group relative px-6 py-3.5 bg-foreground text-background rounded-full font-bold text-xs tracking-tighter transition-transform hover:scale-105 overflow-hidden">
-            <span className="relative z-10 flex items-center gap-2">
-              DISCOVER PROJECTS <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-            </span>
-          </button>
+          <Link href="/projects">
+            <button className="group relative px-6 py-3.5 bg-foreground text-background rounded-full font-bold text-xs tracking-tighter transition-transform hover:scale-105 overflow-hidden">
+              <span className="relative z-10 flex items-center gap-2">
+                DISCOVER PROJECTS <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </button>
+          </Link>
           <button className="px-5 py-3 text-[10px] font-mono tracking-widest uppercase hover:underline underline-offset-4 transition-all opacity-40 hover:opacity-100">
             Scroll to explore ↓
           </button>

@@ -99,6 +99,21 @@ export default function ProjectPage() {
                      </div>
                   </div>
 
+                  {/* Sub Projects (if any) */}
+                  {project.subProjects && (
+                     <div className="space-y-6 pt-10">
+                        <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Project Modules // Expandable Units</p>
+                        <div className="grid grid-cols-1 gap-4">
+                           {project.subProjects.map((sub: any) => (
+                              <div key={sub.id} className="p-6 rounded-2xl border border-foreground/5 bg-foreground/5 space-y-2 hover:border-foreground/10 transition-all">
+                                 <h4 className="text-sm font-bold uppercase tracking-tight">{sub.title}</h4>
+                                 <p className="text-xs text-secondary leading-relaxed opacity-70">{sub.desc}</p>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                  )}
+
                   {/* Meta row */}
                   <div className="grid grid-cols-3 gap-6 pt-6 border-t border-foreground/5">
                      {[

@@ -12,6 +12,32 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const experiences = [
   {
+    role: "Summer Internship Emaar",
+    company: "Emaar Properties PJSC",
+    department: "Construction Management & Structural Oversight",
+    duration: "60 Days // Summer",
+    period: "Jun 2024 - Aug 2024",
+    location: "Dubai, UAE",
+    image: "https://media.licdn.com/dms/image/v2/D4D2DAQFc_J018ba6xw/profile-treasury-image-shrink_800_800/B4DZ1OrXSNIcAY-/0/1775141484486?e=1775840400&v=beta&t=lNr3gpl76qU9HjKFGoQUliTJs2NPT03yejgovY8gd8s",
+    shortDesc: "Experience in high-rise building construction and structural inspection protocols at Emaar projects.",
+    fullDesc: "Contributed to structural oversight and quality control processes for a high-rise residential development. Observed large-scale concrete pouring, reinforcement inspection, and safety compliance according to international Emaar standards.",
+    skills: ["High-rise Construction", "Quality Control", "Structural Inspection", "Safety Compliance"],
+    tests: ["Concrete Slump Test", "Cube Compression Test", "Steel Grade Verification", "Rebar Spacing Analysis"]
+  },
+  {
+    role: "Internship at FWO project",
+    company: "Frontier Works Organization (FWO)",
+    department: "Bridge Engineering & Infrastructure",
+    duration: "45 Days // Professional",
+    period: "Jan 2024 - Mar 2024",
+    location: "Karachi, Sindh, PK",
+    image: "https://media.licdn.com/dms/image/v2/D4D2DAQGWzMOwGM7Gqg/profile-treasury-image-shrink_800_800/B4DZ1OQsaaIYAY-/0/1775134493540?e=1775844000&v=beta&t=TzCaK8Wv9Kv9UKRh-R1Q8gqXMUR6xEUnTk8w8pvLvag",
+    shortDesc: "Focus on military-grade infrastructure speed and structural durability in major highway projects.",
+    fullDesc: "Worked alongside FWO engineers on a strategic highway bridge project. Focused on rapid infrastructure deployment, structural durability assessment, and logistical coordination for large-scale engineering equipment.",
+    skills: ["Infrastructure Logistics", "Bridge Site Supervision", "Durability Assessment", "Rapid Deployment Strategies"],
+    tests: ["Soil Compaction", "Pile Load Test", "Non-Destructive Testing (NDT)", "Alignment Verification"]
+  },
+  {
     role: "Summer Internship",
     company: "Executive Engineer Highway Division Jamshoro",
     department: "Work and Service Department, Government of Sindh",
