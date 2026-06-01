@@ -1,0 +1,5 @@
+Specifications and Bill of quantities ( BOQ ) of bri infrastructure project Bin qasim power plant Karachi
+
+
+
+This project covers the Specifications and Bill of Quantities (BOQ) for BRI infrastructure projects with focus on the Bin Qasim Power Plant and Port. It explains the general technical specifications of transportation, energy, and maritime development under BRI, including roads, rail networks, coal power plants, renewable projects, ports, terminals, and logistics zones. The project also provides technical details of the Bin Qasim Power Plant, such as supercritical boiler systems, imported coal fuel, seawater-based cooling, ESP and FGD emission control, coal handling systems, desalination plant, and 500 kV grid connection. The BOQ section lists major construction items including earthworks, concrete, steel structures, boiler units, cooling towers, FGD systems, ESP units, coal conveyors, and control room works.

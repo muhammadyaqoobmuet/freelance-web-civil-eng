@@ -56,17 +56,17 @@ export default function ProjectsPage() {
                 href={`/projects/${project.slug}`}
                 className="proj-card group block rounded-2xl border border-foreground/10 bg-muted/20 dark:bg-zinc-900/30 overflow-hidden hover:border-foreground/20 transition-all duration-300"
               >
-                {/* Full-width image */}
-                <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted">
+                {/* Full-Bleed Thumbnail */}
+                <div className="relative w-full aspect-16/11 overflow-hidden bg-muted">
                   <Image
                     src={project.images[0]}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
                     sizes="(max-width: 768px) 100vw, 50vw"
                     priority={i < 2}
                   />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
 
                 {/* Info */}

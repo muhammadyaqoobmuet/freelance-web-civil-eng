@@ -1,0 +1,4 @@
+PC-1 PERFORMA and PC-2 PERFORMA Feasibility study for the development of 1320 MW coal fired power plant at Bin qasim industrial zone Karachi
+
+
+This project is a PC-I, PC-II, and project report for the proposed development of a 1320 MW coal-fired power plant at Bin Qasim Industrial Zone, Karachi. It includes the project name, sponsoring agency, executing agency, objectives, benefits, technical details, capital cost estimates, financing mode, implementation schedule, sustainability measures, and monitoring framework. The project aims to increase power generation capacity, improve electricity supply, support industrial growth, create employment, and strengthen national energy security. It also includes the feasibility study scope, estimated study cost, implementation timeline, and cost estimate for technical, environmental, financial, engineering, legal, and stakeholder consultation components

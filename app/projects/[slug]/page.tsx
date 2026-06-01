@@ -38,109 +38,121 @@ export default function ProjectPage() {
    return (
       <div ref={container} className="bg-background min-h-screen text-foreground">
          <Navbar />
+         
+         <main className="pt-32 pb-24 px-6">
+            <div className="max-w-6xl mx-auto">
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                  
+                  {/* Left: Project Details */}
+                  <div className="space-y-14">
+                     {/* Back link */}
+                     <Link href="/projects" className="proj-header inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary hover:text-foreground transition-all group">
+                        <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> All Projects
+                     </Link>
 
-         {/* Full-width hero image — no container, no padding */}
-         <div className="w-full aspect-[16/7] relative bg-muted mt-16">
-            <Image
-               src={project.images[0]}
-               alt={project.title}
-               fill
-               className="object-cover"
-               priority
-               sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-black/20" />
-         </div>
-
-         <main className="py-16 px-6">
-            <div className="max-w-3xl mx-auto space-y-14">
-
-               {/* Back link */}
-               <Link href="/projects" className="proj-header inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary hover:text-foreground transition-all group">
-                  <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> All Projects
-               </Link>
-
-               {/* Title block */}
-               <div className="proj-header space-y-4 border-b border-foreground/5 pb-10">
-                  <div className="flex items-center gap-3 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary opacity-50">
-                     <span>{project.category}</span>
-                     <span>·</span>
-                     <span>{project.year}</span>
-                     <span>·</span>
-                     <span>Case Study {String(idx + 1).padStart(2, "0")}</span>
-                  </div>
-                  <h1 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-[0.95]">
-                     {project.title}
-                  </h1>
-                  <p className="text-sm md:text-base text-secondary leading-relaxed font-light max-w-xl">
-                     {project.description}
-                  </p>
-               </div>
-
-               {/* Body */}
-               <div className="proj-body space-y-12">
-                  {/* Long description */}
-                  <div className="space-y-3">
-                     <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Project Overview</p>
-                     <p className="text-base md:text-lg text-secondary leading-relaxed font-light">
-                        {project.longDescription}
-                     </p>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="space-y-3">
-                     <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Technology Stack</p>
-                     <div className="flex flex-wrap gap-2">
-                        {project.tags.map(tag => (
-                           <span key={tag} className="text-[9px] font-mono px-3 py-1 border border-foreground/10 rounded-full text-secondary">
-                              {tag}
-                           </span>
-                        ))}
+                     {/* Title block */}
+                     <div className="proj-header space-y-4 border-b border-foreground/5 pb-10 font-bold">
+                        <div className="flex items-center gap-3 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary opacity-50">
+                           <span>{project.category}</span>
+                           <span>·</span>
+                           <span>{project.year}</span>
+                           <span>·</span>
+                           <span>Case Study {String(idx + 1).padStart(2, "0")}</span>
+                        </div>
+                        <h1 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-none">
+                           {project.title}
+                        </h1>
                      </div>
-                  </div>
 
-                  {/* Sub Projects (if any) */}
-                  {project.subProjects && (
-                     <div className="space-y-6 pt-10">
-                        <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Project Modules // Expandable Units</p>
-                        <div className="grid grid-cols-1 gap-4">
-                           {project.subProjects.map((sub: any) => (
-                              <div key={sub.id} className="p-6 rounded-2xl border border-foreground/5 bg-foreground/5 space-y-2 hover:border-foreground/10 transition-all">
-                                 <h4 className="text-sm font-bold uppercase tracking-tight">{sub.title}</h4>
-                                 <p className="text-xs text-secondary leading-relaxed opacity-70">{sub.desc}</p>
+                     {/* Body */}
+                     <div className="proj-body space-y-12">
+                        {/* Long description */}
+                        <div className="space-y-3">
+                           <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Project Overview</p>
+                           <p className="text-base md:text-lg text-secondary leading-relaxed font-light">
+                              {project.longDescription}
+                           </p>
+                        </div>
+
+                        {/* Tags */}
+                        <div className="space-y-3">
+                           <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Keywords</p>
+                           <div className="flex flex-wrap gap-2">
+                              {project.tags.map(tag => (
+                                 <span key={tag} className="text-[9px] font-mono px-3 py-1 border border-foreground/10 rounded-full text-secondary">
+                                    {tag}
+                                 </span>
+                              ))}
+                           </div>
+                        </div>
+
+                        {/* Sub Projects (if any) */}
+                        {project.subProjects && (
+                           <div className="space-y-6 pt-10">
+                              <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Project Modules</p>
+                              <div className="grid grid-cols-1 gap-4">
+                                 {project.subProjects.map((sub: any) => (
+                                    <div key={sub.id} className="p-6 rounded-2xl border border-foreground/5 bg-foreground/5 space-y-2 hover:border-foreground/10 transition-all">
+                                       <h4 className="text-sm font-bold uppercase tracking-tight">{sub.title}</h4>
+                                       <p className="text-xs text-secondary leading-relaxed opacity-70">{sub.desc}</p>
+                                    </div>
+                                 ))}
+                              </div>
+                           </div>
+                        )}
+
+                        {/* Meta row */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-foreground/5">
+                           {[
+                              { label: "Timeline", value: project.year },
+                              { label: "Industry", value: project.category },
+                              { label: "Deliverable", value: "Full Analysis" },
+                           ].map(m => (
+                              <div key={m.label} className="space-y-1">
+                                 <p className="text-[9px] font-mono uppercase tracking-widest opacity-40">{m.label}</p>
+                                 <p className="text-sm font-semibold">{m.value}</p>
                               </div>
                            ))}
                         </div>
                      </div>
-                  )}
-
-                  {/* Meta row */}
-                  <div className="grid grid-cols-3 gap-6 pt-6 border-t border-foreground/5">
-                     {[
-                        { label: "Timeline", value: project.year },
-                        { label: "Industry", value: project.category },
-                        { label: "Deliverable", value: "Full Analysis" },
-                     ].map(m => (
-                        <div key={m.label} className="space-y-1">
-                           <p className="text-[9px] font-mono uppercase tracking-widest opacity-40">{m.label}</p>
-                           <p className="text-sm font-semibold">{m.value}</p>
-                        </div>
-                     ))}
                   </div>
+
+                  <div className="lg:sticky lg:top-32 h-fit space-y-6">
+                     <div className="rounded-3xl overflow-hidden border border-foreground/10 bg-zinc-950/50 backdrop-blur-sm relative aspect-4/5 shadow-2xl">
+                        {/* Blueprint Grid Overlay */}
+                        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[32px_32px]" />
+                        
+                        <Image
+                           src={project.images[0]}
+                           alt={project.title}
+                           fill
+                           className="object-contain p-6 md:p-12 hover:scale-[1.02] transition-transform duration-700 relative z-10"
+                           priority
+                        />
+                     </div>
+                     <div className="bg-muted/30 rounded-2xl p-4 flex items-center justify-center border border-foreground/5">
+                        <p className="text-[9px] font-mono uppercase tracking-widest opacity-40">High Resolution Layout Preview</p>
+                     </div>
+                  </div>
+
                </div>
 
-               {/* Next project */}
-               <div className="pt-10 border-t border-foreground/5">
-                  <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40 mb-4">Next Project</p>
+               {/* Next project footer */}
+               <div className="mt-32 pt-16 border-t border-foreground/5">
+                  <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40 mb-6">Next project in queue</p>
                   <Link
                      href={`/projects/${next.slug}`}
-                     className="group flex items-center justify-between gap-4 p-5 rounded-2xl border border-foreground/10 hover:border-foreground/20 bg-muted/20 dark:bg-zinc-900/20 transition-all duration-300"
+                     className="group flex flex-col md:flex-row md:items-center justify-between gap-6 p-10 rounded-[2.5rem] border border-foreground/10 hover:border-foreground/20 bg-muted/20 dark:bg-zinc-900/10 transition-all duration-500 overflow-hidden relative"
                   >
-                     <div>
-                        <p className="text-[9px] font-mono opacity-40 mb-1">{next.category} · {next.year}</p>
-                        <h3 className="text-base font-black uppercase tracking-tight">{next.title}</h3>
+                     <div className="relative z-10">
+                        <p className="text-[9px] font-mono opacity-40 mb-2 uppercase tracking-widest">{next.category} // {next.year}</p>
+                        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight line-clamp-1">{next.title}</h3>
                      </div>
-                     <ArrowRight className="w-5 h-5 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all shrink-0" />
+                     <div className="relative z-10 flex items-center gap-3 text-[10px] font-mono font-black uppercase tracking-[0.3em] group-hover:gap-5 transition-all duration-500">
+                        View Case <ArrowRight className="w-4 h-4" />
+                     </div>
+                     
+                     <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[120px] -translate-y-1/2 translate-x-1/2 rounded-full" />
                   </Link>
                </div>
 
