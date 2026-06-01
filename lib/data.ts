@@ -4,9 +4,9 @@ export const projects = [
     slug: "tall-building-performance",
     category: "Structural Analysis",
     year: "2024",
-    description: "In-depth comparative study of various lateral load resisting systems for vertical structures using computational modeling.",
-    longDescription: "This research project involved the modeling and analysis of a 60-story building using ETABS. We evaluated the seismic and wind performance of five distinct structural systems: Shear Wall, Core-only, Outrigger, Diagrid, and Hybrid systems. The study quantified floor accelerations, lateral drift, and structural weight efficiency, providing a matrix for selecting the optimal system based on height-to-width ratios.",
-    tags: ["ETABS", "Structural Analysis", "Tall Buildings", "Seismic Design"],
+    description: "This final year project focuses on the comparative structural performance evaluation of different lateral load-resisting systems used in tall buildings.",
+    longDescription: "This final year project focuses on the comparative structural performance evaluation of different lateral load-resisting systems used in tall buildings. The study compares five major structural systems: shear wall system, core system, outrigger system, diagrid system, and hybrid structural system. The main purpose of this research is to identify the most efficient and suitable structural system for tall buildings by evaluating their behavior under gravity loads and lateral loads such as wind and earthquake forces. In this project, a supertall building of approximately 350 meters height is considered and modeled in ETABS software.",
+    tags: ["ETABS", "Structural Engineering", "Tall Buildings", "Seismic Analysis"],
     images: ["/projects/skyscraper_structure_jpg_1775225893194.png"]
   },
   {
@@ -14,9 +14,9 @@ export const projects = [
     slug: "qs-30x45",
     category: "Quantity Surveying",
     year: "2023",
-    description: "Detailed material take-offs and cost estimation for a medium-scale residential project.",
-    longDescription: "Comprehensive quantity surveying involving excavation, PCC, RCC, masonry, and finishing works for a 1350 sq. ft. build-up area. Developed detailed BOQs and cost analysis reports.",
-    tags: ["Project Estimation", "BOQ", "Material Take-off"],
+    description: "Detailed estimation and cost analysis for a 1350 sq. ft. residential structure in Jamshoro.",
+    longDescription: "This project focuses on Quantity Surveying and Estimation for a residential building located in Jamshoro with a proposed area of 30 ft × 45 ft, equal to 1350 sq. ft. The project includes the estimation of quantities for a ground-floor residential structure consisting of bedrooms, bathrooms, kitchen, drawing room, car porch, lounge, and other essential spaces. It covers drawings, structural details, earthwork, RCC columns, plinth beams, roof beams, roof slab, DPC, brickwork, plastering, flooring, rate analysis, bill of quantity, preliminary estimate, total project cost, and rate per square foot.",
+    tags: ["QS", "Estimation", "Residential Building", "BOQ"],
     images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
   },
   {
@@ -24,9 +24,19 @@ export const projects = [
     slug: "qs-40x50",
     category: "Quantity Surveying",
     year: "2023",
-    description: "Technical estimation and budgeting for a 2000 sq. ft. residential unit.",
-    longDescription: "Detailed estimation of structural and architectural components, including rebar scheduling and finishing material optimization for a standard residential plot.",
-    tags: ["Estimation", "Budgeting", "Civil Engineering"],
+    description: "Comprehensive 2000 sq.ft residential home project focusing on quantity calculations and rate analysis.",
+    longDescription: "This project is based on Quantity Surveying and Estimation for a 2000 sq.ft ground-floor residential home at Jamshoro, with an adopted site size of 40 ft × 50 ft. The project focuses on preparing quantity calculations and rate analysis for major civil engineering works used in residential construction. It includes drawings and details, earthwork calculation, RCC gate columns, RCC rectangular columns, brickwork in superstructure, RCC plinth beams, RCC roof beams, roof slab, DPC, plastering, flooring, bill of quantity, preliminary estimate, total project cost, and working out the rate per square foot.",
+    tags: ["QS", "Rate Analysis", "Construction Cost", "Civil Engineering"],
+    images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
+  },
+  {
+    title: "Quantity Surveying and Estimation of (62ft × 68ft) Residential Building",
+    slug: "qs-62x68",
+    category: "Quantity Surveying",
+    year: "2024",
+    description: "Professional 4216 sq.ft QS estimation project in a blueprint-style format.",
+    longDescription: "This project is a civil engineering based Quantity Surveying and Estimation project prepared in a professional blueprint-style format. It preserves the project data, drawings, tables, calculations, rate analysis, bill of quantity, and square-foot rate working from the original project content. The report contains a complete sequence of quantity calculations, including calculation for rectangular columns, plinth beam, roof beam, slab, DPC, brick masonry, flooring, plastering, and summary of the project.",
+    tags: ["Blueprint Style", "QS", "Project Summary", "Structural Details"],
     images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
   },
   {
@@ -34,19 +44,19 @@ export const projects = [
     slug: "qs-50x100",
     category: "Quantity Surveying",
     year: "2024",
-    description: "Large-scale residential estimation focusing on high-end structural finishes.",
-    longDescription: "Project management and financial planning for a luxury residential build, involving complex foundation work and premium material specifications.",
-    tags: ["Large Scale", "QS", "Project Management"],
+    description: "Detailed 5000 sq.ft residential project following a complete civil engineering workflow.",
+    longDescription: "This project is a detailed Quantity Surveying and Estimation project for a 5000 sq.ft ground-floor residential home with an adopted site size of 50 ft × 100 ft. The report follows a complete civil engineering estimation workflow, including drawings, quantity summary, rate analysis, bill of quantity, preliminary estimate, total cost, and rate per square foot. The project includes calculations for earthwork, RCC gate columns, RCC rectangular columns, brickwork in superstructure, RCC plinth beams, RCC roof beams, roof slab, DPC, plastering, flooring, electric work, timber work, water supply and sanitary work.",
+    tags: ["Workflow", "Civil Engineering", "Large Scale", "Project Report"],
     images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
   },
   {
-    title: "Quantity Surveying and Estimation of (100ft × 100ft) Residential Building",
+    title: "Quantity Surveying and Estimation of (100 ft × 100ft) Residential Building",
     slug: "qs-100x100",
     category: "Quantity Surveying",
     year: "2024",
-    description: "Massive residential complex estimation including site development and landscape budgeting.",
-    longDescription: "A comprehensive look at a 10,000 sq. ft. footprint residential project, highlighting the logistical challenges in material procurement and structural volume management.",
-    tags: ["Commercial Scale", "Urban Planning", "Financial Analysis"],
+    description: "Luxury 10,000 sq.ft residential villa project with comprehensive architectural planning.",
+    longDescription: "This project is prepared for Quantity Surveying and Estimation of a 10,000 sq.ft ground-floor luxury residential villa. The work includes architectural planning, structural assumptions, quantity takeoff, rate analysis, bill of quantities, preliminary estimate, total project cost, and rate per square foot. The villa plan includes six bedrooms with attached bathrooms, drawing room, dining hall, family lounge, kitchen with pantry, study/home theater, servant room, store, car porch for four cars, front verandah, internal circulation, and landscaping margin.",
+    tags: ["Luxury Villa", "Architectural Planning", "Massive Project", "Estimation"],
     images: ["/projects/industrial_warehouse_jpg_1775225937318.png"]
   },
   {
@@ -54,19 +64,19 @@ export const projects = [
     slug: "bri-feasibility",
     category: "Research / Feasibility",
     year: "2023",
-    description: "Geopolitical and engineering feasibility assessment of BRI corridors in the regional context.",
-    longDescription: "An analytical study on the infrastructure impact of the Belt and Road Initiative, focusing on transportation networks, economic nodes, and long-term structural sustainability of the proposed routes.",
-    tags: ["Feasibility", "BRI", "Infrastructure Planning"],
+    description: "Detailed feasibility study of BRI with special focus on the Bin Qasim Power Plant under CPEC.",
+    longDescription: "This project presents a feasibility study of the Belt and Road Initiative (BRI) with special focus on the Bin Qasim Power Plant under CPEC. It explains the importance of BRI as a global infrastructure development strategy and studies its impact through SWOT analysis, PESTLE analysis, Environmental Impact Assessment, and project feasibility components. The report evaluates the strategic, economic, technical, environmental, and social feasibility of the Bin Qasim Power Plant, including its capacity of 1320 MW.",
+    tags: ["BRI", "CPEC", "Feasibility", "Power Plant"],
     images: ["/projects/bridge_project_jpg_1775225817570.png"]
   },
   {
-    title: "Specifications and Bill of Quantities (BOQ) of BRI Infrastructure Project - Bin Qasim Power Plant Karachi",
+    title: "Specifications and Bill of quantities (BOQ) of BRI Infrastructure Project",
     slug: "boq-bin-qasim",
     category: "Infrastructure",
     year: "2024",
-    description: "Technical documentation and cost scheduling for a major 1320 MW power project.",
-    longDescription: "Developed detailed technical specifications and BOQs for the structural components of the Bin Qasim power plant, ensuring compliance with international BRI engineering standards.",
-    tags: ["BOQ", "Power Plant", "Standardization"],
+    description: "Technical specifications and BOQ for Bin Qasim Power Plant and Port infrastructure.",
+    longDescription: "This project covers the Specifications and Bill of Quantities (BOQ) for BRI infrastructure projects with focus on the Bin Qasim Power Plant and Port. It explains the general technical specifications of transportation, energy, and maritime development under BRI, including roads, rail networks, coal power plants, renewable projects, ports, terminals, and logistics zones. The project also provides technical details of the Bin Qasim Power Plant, such as supercritical boiler systems, imported coal fuel, seawater-based cooling, ESP and FGD emission control.",
+    tags: ["Technical Specifications", "BOQ", "Infrastructure", "Bin Qasim"],
     images: ["/projects/dam_engineering_jpg_1775226169494.png"]
   },
   {
@@ -74,29 +84,19 @@ export const projects = [
     slug: "bri-user-satisfaction",
     category: "Research",
     year: "2024",
-    description: "Post-occupancy and utility evaluation of infrastructure projects under the BRI framework.",
-    longDescription: "Sociotechnical research project evaluating how completed infrastructure projects meet the functional needs of the end-users and local communities in the BRI corridor.",
-    tags: ["Assessment", "User Experience", "Infrastructure"],
+    description: "Mixed-method research evaluating user perceptions of BRI infrastructure projects.",
+    longDescription: "This project examines end-user satisfaction regarding BRI-related projects, especially the Bin Qasim Power Plant. It evaluates how local communities, businesses, government officials, and civil society groups perceive the effects of BRI projects on infrastructure, employment, business growth, environment, transparency, and social integration. The assessment uses mixed-method research, including surveys and interviews, with respondents from countries such as Pakistan, Kenya, Sri Lanka, Ethiopia, Kazakhstan, and Serbia.",
+    tags: ["User Satisfaction", "Research", "BRI Impact", "Mixed-Method"],
     images: ["/projects/bridge_project_jpg_1775225817570.png"]
   },
   {
-    title: "PC-1 PERFORMA Feasibility study for the development of 1320 MW coal fired power plant at Bin Qasim industrial zone Karachi",
-    slug: "pc1-power-plant",
-    category: "Feasibility / Govt",
-    year: "2023",
-    description: "Official government planning document for technical and financial project approval.",
-    longDescription: "Comprehensive PC-1 Performa development involving technical design parameters, cost estimates, human resource requirements, and environmental impact assessments for a coal-fired power plant.",
-    tags: ["PC-1", "Govt Planning", "Feasibility"],
-    images: ["/projects/dam_engineering_jpg_1775226169494.png"]
-  },
-  {
-    title: "PC-2 PERFORMA Feasibility study for the development of 1320 MW coal fired power plant at Bin Qasim industrial zone Karachi",
-    slug: "pc2-power-plant",
+    title: "PC-1 & PC-2 Feasibility Study for 1320 MW Coal Fired Power Plant",
+    slug: "pc-performa-feasibility",
     category: "Feasibility / Govt",
     year: "2024",
-    description: "Detailed investigation and survey phase documentation for project inception.",
-    longDescription: "Focused on the survey and institutional phase of the power plant development, outlining the necessary investigations and preliminary design works required before execution.",
-    tags: ["PC-2", "Project Survey", "Industrial Zone"],
+    description: "Comprehensive PC-I and PC-II performa for the Bin Qasim Industrial Zone coal power project.",
+    longDescription: "This project is a PC-I, PC-II, and project report for the proposed development of a 1320 MW coal-fired power plant at Bin Qasim Industrial Zone, Karachi. It includes the project name, sponsoring agency, executing agency, objectives, benefits, technical details, capital cost estimates, financing mode, implementation schedule, sustainability measures, and monitoring framework. It also includes the feasibility study scope, estimated study cost, implementation timeline, and cost estimate for technical, environmental, financial, engineering, legal, and stakeholder consultation components.",
+    tags: ["PC-1", "PC-2", "Govt Approval", "Project Planning"],
     images: ["/projects/dam_engineering_jpg_1775226169494.png"]
   },
   {

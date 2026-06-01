@@ -70,37 +70,10 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Info */}
-                <div className="p-6 space-y-4">
-                  <div>
-                    <p className="text-[9px] font-mono uppercase tracking-widest text-secondary opacity-50 mb-1">
-                      {project.category} · {project.year}
-                    </p>
-                    <h2 className="text-lg md:text-xl font-black tracking-tight uppercase leading-tight line-clamp-2">
-                      {project.title}
-                    </h2>
-                  </div>
-
-                  <p className="text-xs text-secondary leading-relaxed line-clamp-2 opacity-70">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="text-[8px] font-mono px-2 py-0.5 border border-foreground/10 rounded-full text-secondary">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between pt-3 border-t border-foreground/5">
-                    <span className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-widest opacity-40">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 opacity-80" />
-                      All Systems Operational
-                    </span>
-                    <span className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase tracking-widest group-hover:gap-2 transition-all duration-200">
-                      View Project <ArrowRight className="w-3 h-3" />
-                    </span>
-                  </div>
+                <div className="p-6">
+                  <h2 className="text-lg md:text-xl font-black tracking-tight uppercase leading-tight line-clamp-3 group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h2>
                 </div>
               </Link>
             ))}
