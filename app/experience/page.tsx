@@ -19,7 +19,7 @@ export default function ExperiencePage() {
   }, { scope: container })
 
   return (
-    <div ref={container} className="bg-background min-h-screen text-foreground">
+    <div ref={container} className="bg-transparent min-h-screen text-foreground">
       <Navbar />
 
       <main className="pt-36 pb-32">

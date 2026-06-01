@@ -110,5 +110,15 @@ export const projects: Project[] = [
     longDescription: "This project focuses on the comparative structural performance evaluation of different lateral load-resisting systems used in tall buildings. The study compares five major structural systems: shear wall system, core system, outrigger system, diagrid system, and hybrid structural system. The main purpose of this research is to identify the most efficient and suitable structural system for tall buildings by evaluating their behavior under gravity loads and lateral loads such as wind and earthquake forces. Tall buildings are highly affected by lateral forces, which may cause excessive displacement, storey drift, vibration, overturning moment, and instability.",
     tags: ["ETABS", "Structural Engineering", "Tall Buildings", "Seismic"],
     images: ["/projects/p10/image.png"]
+  },
+  {
+    title: "Analysis and Study of Structural Elements Behavior",
+    slug: "structural-elements-behavior-analysis",
+    category: "Structural Analysis",
+    year: "2023",
+    description: "Detailed investigation into the structural behavior of various elements under complex loading scenarios.",
+    longDescription: "This engineering study involves the deep analysis of different structural elements, including beams, columns, and slabs, under various loading conditions such as point loads, uniformly distributed loads, and lateral forces. The project specifically investigates deflection patterns, stress distribution, and failure modes using both local code standards and computational verification. It provides a comprehensive understanding of structural integrity in residential and commercial frameworks.",
+    tags: ["Structural Behavior", "Loading Analysis", "Civil Engineering", "Integrity Study"],
+    images: ["/projects/p11/image.png"]
   }
 ];

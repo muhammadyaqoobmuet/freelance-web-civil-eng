@@ -6,6 +6,7 @@ import { Inter, Playfair_Display, JetBrains_Mono, Outfit } from "next/font/googl
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Loader } from "@/components/Loader";
+import ArchitecturalBackground from "@/components/ArchitecturalBackground";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({
@@ -45,7 +46,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {loading && <Loader onCompleteAction={() => setLoading(false)} />}
-          <main className={cn("transition-opacity duration-700 bg-background text-foreground engineering-grid", loading ? "opacity-0" : "opacity-100")}>
+          <ArchitecturalBackground />
+          <main className={cn("transition-opacity duration-700 bg-transparent text-foreground engineering-grid relative z-10", loading ? "opacity-0" : "opacity-100")}>
             {children}
           </main>
         </ThemeProvider>

@@ -36,7 +36,7 @@ export default function ProjectPage() {
    )
 
    return (
-      <div ref={container} className="bg-background min-h-screen text-foreground">
+      <div ref={container} className="bg-transparent min-h-screen text-foreground">
          <Navbar />
          
          <main className="pt-32 pb-24 px-6">

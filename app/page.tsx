@@ -33,7 +33,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-background text-foreground transition-colors duration-500">
+    <div className="relative min-h-screen bg-transparent text-foreground transition-colors duration-500">
       <Navbar />
       <main>
         <Hero />
