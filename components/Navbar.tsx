@@ -9,7 +9,8 @@ import { ThemeToggle } from "./ThemeToggle"
 import { Menu, X, ArrowUpRight } from "lucide-react"
 
 const navItems = [
-  { name: "About", href: "/#about" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
   { name: "Education", href: "/education" },
   { name: "Experience", href: "/experience" },
@@ -129,7 +130,7 @@ export function Navbar() {
       {/* Mobile Drawer - Using a Portal-like approach by making it fixed and high z-index */}
       <div
         ref={menuRef}
-        className="fixed inset-0 w-full h-full bg-white dark:bg-black z-[200] pointer-events-auto transform translate-x-full opacity-0 md:hidden flex flex-col pt-32 p-10 overflow-hidden"
+        className="fixed inset-0 w-full h-full bg-white dark:bg-black z-[200] pointer-events-auto transform translate-x-full opacity-0 md:hidden flex flex-col pt-32 p-10 overflow-y-auto"
       >
         <button
           onClick={() => setIsOpen(false)}

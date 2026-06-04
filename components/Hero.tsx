@@ -78,17 +78,19 @@ export function Hero() {
            Civil Engineer specializing in <span className="text-foreground font-medium underline underline-offset-4 decoration-border/50">resilient infrastructure</span> and innovative computational design.
         </p>
 
-        <div ref={btnRef} className="flex flex-col sm:flex-row items-center justify-center gap-5">
-          <Link href="/projects">
-            <button className="group relative px-6 py-3.5 bg-foreground text-background rounded-full font-bold text-xs tracking-tighter transition-transform hover:scale-105 overflow-hidden">
+        <div ref={btnRef} className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <Link href="/services">
+            <button className="group relative px-8 py-4 bg-foreground text-background rounded-full font-bold text-[10px] tracking-widest uppercase transition-transform hover:scale-105 overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">
-                DISCOVER PROJECTS <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                Services Offered <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </span>
             </button>
           </Link>
-          <button className="px-5 py-3 text-[10px] font-mono tracking-widest uppercase hover:underline underline-offset-4 transition-all opacity-40 hover:opacity-100">
-            Scroll to explore ↓
-          </button>
+          <Link href="/contact">
+            <button className="px-8 py-4 border border-foreground/20 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-foreground hover:text-background transition-all">
+              Contact Now
+            </button>
+          </Link>
         </div>
       </div>
 

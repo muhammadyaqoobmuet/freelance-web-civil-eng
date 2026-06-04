@@ -50,36 +50,21 @@ export function About() {
 
           <div className="lg:col-span-7 space-y-10 text-secondary leading-[1.8] font-light text-lg">
             <div className="space-y-8">
-
               <p>
-                I am a Civil Engineering student with a strong interest in structural engineering, construction management, transportation, and infrastructure development. Through my academic journey, I have built technical knowledge and practical skills via coursework, engineering projects, and internships. I focus on applying engineering principles to solve real-world problems and build resilient infrastructure.
+                I am a Civil Engineering student with a strong interest in structural engineering, construction management, quantity surveying, and infrastructure development.
               </p>
 
               <p>
-                My background is multidisciplinary. I hold an A.D. in Arts and a Diploma in Electrical Engineering, alongside my ongoing Bachelor's in Civil Engineering. This combination helps me approach structural analysis, geotechnical engineering, and project planning with a broader technical view.
+                My academic and practical experience includes projects such as comparative structural performance evaluation of shear wall, core, outrigger, diagrid, and hybrid systems using ETABS, multiple quantity surveying and estimation projects for residential buildings of different sizes, Belt and Road Initiative (BRI) feasibility studies, BOQ preparation for Bin Qasim Power Plant, end-user satisfaction assessment of BRI projects, PC-1 and PC-2 feasibility study for a 1320 MW coal-fired power plant, and study of different structural elements.
               </p>
 
               <p>
-                I have completed four professional internships at organizations including the{" "}
-                <span className="text-foreground font-medium">National Highway Authority (NHA)</span>,{" "}
-                <span className="text-foreground font-medium">Emaar</span>, and the{" "}
-                <span className="text-foreground font-medium">Frontier Works Organization (FWO)</span>. These experiences gave me direct exposure to large-scale residential development, highway maintenance, and site operations.
+                I have also completed internships with <span className="text-foreground font-medium">National Highway Authority (NHA)</span>, <span className="text-foreground font-medium">Emaar</span>, and <span className="text-foreground font-medium">Frontier Works Organization (FWO)</span>. My technical skills include ETABS, AutoCAD, quantity surveying, estimation, BOQ preparation, feasibility studies, and construction management.
               </p>
-
-              <div className="py-6 border-y border-foreground/5 space-y-6">
-                <h3 className="text-foreground font-bold text-sm uppercase tracking-widest">
-                  Core Proficiency
-                </h3>
-                <p className="text-sm">
-                  I specialize in structural modeling using ETABS, AutoCAD drafting, and Quantity Surveying & Estimation workflows. My portfolio includes 11 major projects, including feasibility studies for the{" "}
-                  <span className="text-foreground font-medium">Belt and Road Initiative (BRI)</span> and performance evaluation of tall building systems.
-                </p>
-              </div>
 
               <p>
-                My career goal is to become an innovative civil engineer focused on designing high-rise structural systems while applying modern software and sustainable construction practices. I am committed to continuous improvement and contributing to impactful infrastructure projects.
+                I aim to grow as a professional civil engineer in the field of infrastructure and structural engineering, committed to continuous improvement and contributing to impactful engineering solutions.
               </p>
-
             </div>
 
             {/* CTA */}
