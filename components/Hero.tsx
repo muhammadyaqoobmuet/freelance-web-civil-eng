@@ -1,114 +1,124 @@
 "use client"
 
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
+import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import Link from "next/link"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { DraftingCompass, Ruler, Construction, HardHat, ChevronRight } from "lucide-react"
-import { cn } from "@/lib/utils"
-
-gsap.registerPlugin(useGSAP, ScrollTrigger)
+import { Copy, Check, ChevronRight, Mail, BadgeCheck, Phone } from "lucide-react"
 
 export function Hero() {
   const container = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
-  const subRef = useRef<HTMLParagraphElement>(null)
-  const btnRef = useRef<HTMLDivElement>(null)
+  const [copied, setCopied] = useState(false)
 
-  React.useEffect(() => {
-    ScrollTrigger.refresh()
-  }, [])
+  const copyEmail = () => {
+    navigator.clipboard.writeText("arslanjamali112@gmail.com")
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   useGSAP(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } })
+    const tl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1 } })
 
-    tl.from(titleRef.current, {
-      y: 60,
+    tl.from(".hero-avatar", {
+      scale: 0.9,
       opacity: 0,
-      skewY: 3,
       duration: 1.2
     })
-      .from(subRef.current, {
-        y: 30,
-        opacity: 0
-      }, "-=0.8")
-      .from(btnRef.current, {
-        y: 20,
-        opacity: 0
-      }, "-=0.6")
-      .from(".hero-line", {
-        scaleX: 0,
-        stagger: 0.15,
-        transformOrigin: "left"
-      }, "-=1")
-      .from(".hero-icon", {
-        scale: 0,
-        opacity: 0,
-        stagger: 0.08,
-        ease: "back.out(1.7)"
-      }, "-=0.8")
+    .from(".hero-text-content > *", {
+      y: 20,
+      opacity: 0,
+      stagger: 0.1,
+    }, "-=0.8")
   }, { scope: container })
 
   return (
     <section ref={container} className="relative min-h-[90vh] flex flex-col justify-center items-center px-6 pt-24 overflow-hidden">
-      {/* Decorative Ruler */}
-      <div className="absolute top-20 left-0 right-0 h-6 flex items-end pointer-events-none opacity-10">
-        {Array.from({ length: 40 }).map((_, i) => (
-          <div key={i} className={cn("border-l border-foreground h-1.5", i % 5 === 0 ? "h-3" : i % 10 === 0 ? "h-4" : "")} style={{ width: '2.5%' }} />
-        ))}
-      </div>
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" 
+        style={{ backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }} 
+      />
 
-      {/* Structural Background Accents */}
-      <div className="absolute top-0 right-0 w-[40%] h-full border-l border-border/30 -skew-x-15 pointer-events-none transform translate-x-1/2 opacity-15" />
-      <div className="absolute bottom-0 left-0 w-[40%] h-full border-r border-border/30 skew-x-15 pointer-events-none transform -translate-x-1/2 opacity-15" />
-
-      <div className="max-w-3xl w-full text-center relative z-10">
-        <div className="flex items-center justify-center gap-4 mb-10">
-          <div className="hero-line w-10 h-px bg-foreground/15" />
-          <span className="text-[9px] font-mono tracking-[0.3em] uppercase text-secondary">Expert // Structural // Innovation</span>
-          <div className="hero-line w-10 h-px bg-foreground/15" />
+      <div className="max-w-5xl w-full relative z-10 flex flex-col md:flex-row items-center md:items-center justify-center gap-12 md:gap-20">
+        
+        {/* Avatar Section - Square Rounded */}
+        <div className="hero-avatar relative">
+          <div className="absolute -inset-1 bg-foreground/10 rounded-[2.5rem] blur opacity-25" />
+          <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-[2.5rem] overflow-hidden border border-foreground/10 bg-muted/20 backdrop-blur-sm shadow-xl">
+            <Image 
+              src="/landing/pngegg.png" 
+              alt="Arslan Javed Portrait" 
+              fill 
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
 
-        <h1 ref={titleRef} className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-8 overflow-hidden text-balance">
-          ARSLAN <span className="font-serif italic font-medium opacity-70">JAVED</span>
-        </h1>
-
-        <p ref={subRef} className="text-lg md:text-xl text-secondary max-w-xl mx-auto mb-10 leading-relaxed font-light">
-           Civil Engineer specializing in <span className="text-foreground font-medium underline underline-offset-4 decoration-border/50">resilient infrastructure</span> and innovative computational design.
-        </p>
-
-        <div ref={btnRef} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Link href="/services">
-            <button className="group relative px-8 py-4 bg-foreground text-background rounded-full font-bold text-[10px] tracking-widest uppercase transition-transform hover:scale-105 overflow-hidden">
-              <span className="relative z-10 flex items-center gap-2">
-                Services Offered <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        {/* Text Content Section */}
+        <div className="hero-text-content flex flex-col items-center md:items-start text-center md:text-left space-y-8 max-w-xl">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-none">
+                Arslan Javed
+              </h1>
+              <BadgeCheck className="w-6 h-6 md:w-8 md:h-8 text-blue-500 fill-blue-500/10 shrink-0" />
+            </div>
+            
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-secondary/60 font-mono text-[10px] uppercase tracking-[0.25em]">
+              <span className="flex items-center gap-2">
+                Civil Engineer
               </span>
-            </button>
-          </Link>
-          <Link href="/contact">
-            <button className="px-8 py-4 border border-foreground/20 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-foreground hover:text-background transition-all">
-              Contact Now
-            </button>
-          </Link>
-        </div>
-      </div>
+              <div className="w-1 h-1 rounded-full bg-foreground/20" />
+              <span>Structural Designer</span>
+              <div className="w-1 h-1 rounded-full bg-foreground/20" />
+              <div className="px-3 py-1 bg-green-500/5 text-green-500 border border-green-500/20 rounded-full lowercase tracking-normal font-bold">
+                online
+              </div>
+            </div>
+          </div>
 
-      <div className="absolute bottom-12 left-0 right-0 flex justify-center gap-10 text-secondary/15">
-        <Ruler className="hero-icon w-6 h-6" />
-        <DraftingCompass className="hero-icon w-6 h-6" />
-        <Construction className="hero-icon w-6 h-6" />
-        <HardHat className="hero-icon w-6 h-6" />
+          <p className="text-lg md:text-xl text-secondary font-light leading-relaxed">
+             Specializing in <span className="text-foreground font-medium underline underline-offset-8 decoration-foreground/20">Structural Analysis</span>, infrastructure projects, and technical BOQ preparation. Passionate about sustainable engineering excellence.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <Link href="/services" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto group relative px-8 py-4 bg-foreground text-background rounded-2xl font-bold text-[10px] tracking-[0.3em] uppercase transition-all hover:scale-[1.02] shadow-lg">
+                Explore Services
+              </button>
+            </Link>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto px-8 py-4 border border-foreground/10 rounded-2xl font-bold text-[10px] tracking-[0.3em] uppercase hover:bg-foreground/5 transition-all">
+                Contact Now
+              </button>
+            </Link>
+          </div>
+
+          {/* Quick Contact Bar */}
+          <div className="flex items-center gap-6 pt-4 border-t border-foreground/5 w-full justify-center md:justify-start">
+            <button 
+              onClick={copyEmail}
+              className="flex items-center gap-2 group transition-opacity"
+            >
+              <Mail className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity" />
+              <span className="text-[10px] font-mono uppercase tracking-widest opacity-40 group-hover:opacity-100 transition-opacity">Email</span>
+              {copied ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3 opacity-20" />}
+            </button>
+            <a href="tel:+923052906776" className="flex items-center gap-2 group transition-opacity">
+              <Phone className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity" />
+              <span className="text-[10px] font-mono uppercase tracking-widest opacity-40 group-hover:opacity-100 transition-opacity">Reach out</span>
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Numerical markers for technical feel */}
-      <div className="absolute top-1/2 left-6 -translate-y-1/2 h-32 flex flex-col justify-between opacity-5">
-        <span className="font-mono text-[9px] rotate-90">0.00°</span>
-        <span className="font-mono text-[9px] rotate-90">90.00°</span>
-        <span className="font-mono text-[9px] rotate-90">180.00°</span>
-      </div>
-      <div className="absolute top-20 right-10 opacity-5">
-        <span className="font-mono text-[8px] tracking-widest uppercase">Structural Code: B-1254</span>
+      <div className="absolute bottom-10 left-10 hidden xl:block opacity-10">
+        <div className="flex flex-col gap-2 font-mono text-[9px] tracking-[0.4em] uppercase">
+          <span>Project Ref: C-4.2</span>
+          <span>Status: Verified_v1</span>
+        </div>
       </div>
     </section>
   )
