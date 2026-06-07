@@ -9,6 +9,7 @@ import { ThemeToggle } from "./ThemeToggle"
 import { Menu, X, ArrowUpRight } from "lucide-react"
 
 const navItems = [
+  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
@@ -102,7 +103,7 @@ export function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-2">
-            <div className="hidden md:flex items-center gap-1 border-r border-border/60 pr-6 mr-1">
+            <div className="hidden lg:flex items-center gap-1 border-r border-border/60 pr-6 mr-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -118,7 +119,7 @@ export function Navbar() {
               <ThemeToggle />
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden w-10 h-10 bg-foreground text-background flex items-center justify-center rounded-full shadow-lg transition-all active:scale-90"
+                className="lg:hidden w-10 h-10 bg-foreground text-background flex items-center justify-center rounded-full shadow-lg transition-all active:scale-90"
               >
                 {isOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
               </button>
