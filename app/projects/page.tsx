@@ -36,11 +36,11 @@ export default function ProjectsPage() {
 
           {/* Header */}
           <div className="archive-header space-y-8 mb-14">
-            <Link href="/" className="inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary hover:text-foreground transition-all group">
+            <Link href="/" className="inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-foreground/40 hover:text-foreground transition-all group">
               <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> Home
             </Link>
             <div className="space-y-3">
-              <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">Portfolio</p>
+              <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">Portfolio</p>
               <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.9]">
                 Project<br />
                 <span className="font-serif italic font-light normal-case opacity-30 text-3xl md:text-5xl">Archive.</span>
@@ -54,7 +54,7 @@ export default function ProjectsPage() {
               <Link
                 key={project.slug}
                 href={`/projects/${project.slug}`}
-                className="proj-card group block rounded-2xl border border-foreground/10 bg-muted/20 dark:bg-zinc-900/30 overflow-hidden hover:border-foreground/20 transition-all duration-300"
+                className="proj-card group block rounded-2xl border border-border bg-card overflow-hidden hover:border-foreground/15 hover:shadow-card transition-all duration-300"
               >
                 {/* Full-Bleed Thumbnail */}
                 <div className="relative w-full aspect-16/11 overflow-hidden bg-muted">

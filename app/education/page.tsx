@@ -141,13 +141,13 @@ export default function EducationPage() {
         <div className="max-w-3xl mx-auto space-y-12">
 
           {/* Back */}
-          <Link href="/" className="inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary hover:text-foreground transition-all group">
+          <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/50 hover:text-foreground transition-all group">
             <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> Home
           </Link>
 
           {/* Header */}
-          <div className="space-y-4 border-b border-foreground/5 pb-10">
-            <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+          <div className="space-y-4 border-b border-border pb-10">
+            <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
               <GraduationCap className="w-3.5 h-3.5" />
               Academic Profile
             </div>
@@ -155,7 +155,7 @@ export default function EducationPage() {
               Education &amp;<br />
               <span className="font-serif italic font-light normal-case opacity-30 text-3xl md:text-5xl">Academic Degrees.</span>
             </h1>
-            <p className="text-sm md:text-base text-secondary font-light leading-relaxed max-w-xl">
+            <p className="text-base md:text-lg text-foreground/60 font-light leading-relaxed max-w-xl">
               A five-stage academic journey spanning Civil Engineering, Electrical Technology, Liberal Arts,
               and foundational sciences — structured for professional excellence.
             </p>
@@ -169,8 +169,8 @@ export default function EducationPage() {
                 className={cn(
                   "edu-card rounded-2xl border overflow-hidden transition-all duration-300",
                   openId === edu.id
-                    ? "border-foreground/20 bg-muted/30 dark:bg-zinc-900/50"
-                    : "border-foreground/10 bg-muted/10 dark:bg-zinc-900/20 hover:border-foreground/15"
+                    ? "border-foreground/15 bg-muted shadow-soft"
+                    : "border-border bg-card hover:border-foreground/15 hover:shadow-soft"
                 )}
               >
                 {/* Header button */}
@@ -186,7 +186,7 @@ export default function EducationPage() {
                   {/* Info */}
                   <div className="flex-1 min-w-0">
                     <p className="text-sm md:text-base font-bold tracking-tight">{edu.title}</p>
-                    <p className="text-[10px] text-secondary opacity-50 truncate mt-0.5">{edu.institution}</p>
+                    <p className="text-[11px] text-foreground/50 truncate mt-0.5">{edu.institution}</p>
                   </div>
 
                   {/* Right */}
@@ -213,11 +213,11 @@ export default function EducationPage() {
                   openId === edu.id ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                 )}>
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-6 pt-2 border-t border-foreground/5 space-y-2">
+                    <div className="px-6 pb-6 pt-2 border-t border-border space-y-2">
                       {edu.details.map((d) => (
                         <div key={d.label} className={cn(
                           "flex flex-col sm:flex-row sm:gap-6 p-4 rounded-xl",
-                          d.active ? "bg-green-500/5 border border-green-500/10" : "bg-foreground/5"
+                          d.active ? "bg-green-500/5 border border-green-500/10" : "bg-muted"
                         )}>
                           <p className={cn(
                             "text-[10px] font-mono uppercase tracking-widest shrink-0 mb-1 sm:mb-0 sm:w-44",
@@ -225,7 +225,7 @@ export default function EducationPage() {
                           )}>
                             {d.label}
                           </p>
-                          <p className="text-xs text-secondary leading-relaxed">{d.content}</p>
+                          <p className="text-sm text-foreground/60 leading-relaxed">{d.content}</p>
                         </div>
                       ))}
                     </div>

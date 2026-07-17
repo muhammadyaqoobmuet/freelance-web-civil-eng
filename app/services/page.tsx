@@ -91,7 +91,7 @@ export default function ServicesPage() {
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
               Service <br />
-              <span className="font-serif italic font-light text-secondary opacity-40 lowercase">Offerings.</span>
+              <span className="font-serif italic font-light text-foreground/40 lowercase">Offerings.</span>
             </h1>
             <div className="w-20 h-px bg-foreground/20" />
           </div>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
           <div className="services-grid grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
             {serviceCategories.map((category, idx) => (
               <div key={idx} className="service-card group space-y-8">
-                <div className="aspect-video relative rounded-2xl overflow-hidden bg-muted group-hover:shadow-2xl transition-all duration-700">
+                <div className="aspect-video relative rounded-2xl overflow-hidden card group-hover:shadow-card transition-all duration-700">
                   <Image 
                     src={category.image} 
                     alt={category.title} 
@@ -111,13 +111,13 @@ export default function ServicesPage() {
                 </div>
                 
                 <div className="space-y-6">
-                  <h2 className="text-2xl md:text-3xl font-bold tracking-tight uppercase">{category.title}</h2>
-                  <p className="text-sm text-secondary font-light max-w-md leading-relaxed">{category.description}</p>
-                  
-                  <ul className="grid grid-cols-1 gap-3 pt-4 border-t border-foreground/5">
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase">{category.title}</h2>
+                  <p className="text-base text-foreground/60 font-light max-w-md leading-relaxed">{category.description}</p>
+
+                  <ul className="grid grid-cols-1 gap-3 pt-4 border-t border-border">
                     {category.services.map((service, sIdx) => (
-                      <li key={sIdx} className="flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-secondary/60">
-                        <div className="w-1 h-1 rounded-full bg-foreground/30" />
+                      <li key={sIdx} className="flex items-center gap-3 text-sm font-mono uppercase tracking-widest text-foreground/55">
+                        <div className="w-1.5 h-1.5 rounded-full bg-foreground/30" />
                         {service.name}
                       </li>
                     ))}

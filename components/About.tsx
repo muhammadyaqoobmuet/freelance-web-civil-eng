@@ -33,13 +33,13 @@ export function About() {
 
         {/* Intro Header */}
         <div className="about-entry space-y-6">
-          <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+          <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
             <User className="w-3 h-3" />
             About Me
           </div>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-[0.95]">
             Engineering a{" "}
-            <span className="font-serif italic font-light text-secondary opacity-40">
+            <span className="font-serif italic font-light text-foreground/40 opacity-40">
               Sustainable Future.
             </span>
           </h2>
@@ -48,7 +48,7 @@ export function About() {
         {/* Content + Image */}
         <div className="about-entry grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-          <div className="lg:col-span-7 space-y-10 text-secondary leading-[1.8] font-light text-lg">
+          <div className="lg:col-span-7 space-y-10 text-foreground/60 leading-[1.8] font-light text-lg">
             <div className="space-y-8">
               <p>
                 I am a Civil Engineering student with a strong interest in structural engineering, construction management, quantity surveying, and infrastructure development.
@@ -89,7 +89,7 @@ export function About() {
           </div>
 
           {/* Image */}
-          <div className="lg:col-span-5 relative aspect-4/5 rounded-3xl overflow-hidden border border-foreground/5 bg-muted group">
+          <div className="lg:col-span-5 relative aspect-4/5 rounded-3xl overflow-hidden border border-border bg-muted group">
             <Image
               src="/myimage.png"
               alt="Arslan Javed Portrait"

@@ -106,7 +106,7 @@ export function Experience() {
     <section id="experience" ref={container} className="py-24 px-6 relative overflow-hidden bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="mb-16 space-y-4 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-3 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+          <div className="flex items-center justify-center md:justify-start gap-3 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
             <Briefcase className="w-3 h-3" />
             Industrial Exposure
           </div>
@@ -120,10 +120,10 @@ export function Experience() {
             <div
               key={i}
               className={cn(
-                "exp-item group relative p-1 transition-all duration-500 rounded-[2rem] border overflow-hidden",
+                "exp-item group relative p-1 transition-all duration-500 rounded-[2rem] border overflow-hidden card",
                 expandedIndex === i
-                  ? "bg-muted/40 dark:bg-zinc-900/40 border-foreground/10 shadow-sm"
-                  : "bg-muted/20 dark:bg-zinc-900/20 border-foreground/5 hover:border-foreground/10"
+                  ? "border-foreground/15 shadow-card"
+                  : "border-border hover:border-foreground/10 hover:shadow-soft"
               )}
             >
               <button
@@ -132,7 +132,7 @@ export function Experience() {
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
                   <div className="space-y-3">
-                    <div className="flex items-center gap-4 text-[9px] font-mono uppercase tracking-widest text-secondary opacity-60">
+                    <div className="flex items-center gap-4 text-[9px] font-mono uppercase tracking-widest text-foreground/40 opacity-60">
                       <Calendar className="w-3 h-3" />
                       {exp.period}
                       <span className="w-1 h-1 rounded-full bg-current" />
@@ -145,20 +145,20 @@ export function Experience() {
                     </h3>
                   </div>
                   <div className={cn(
-                    "w-12 h-12 rounded-full border border-foreground/10 flex items-center justify-center transition-all duration-500",
-                    expandedIndex === i ? "bg-foreground text-background rotate-180" : "bg-muted/50"
+                    "w-12 h-12 rounded-full border border-border flex items-center justify-center transition-all duration-500",
+                    expandedIndex === i ? "bg-foreground text-background rotate-180" : "bg-muted"
                   )}>
                     <ChevronDown className="w-5 h-5" />
                   </div>
                 </div>
 
                 <div className="flex flex-col md:flex-row md:items-center gap-4 text-xs font-medium">
-                  <div className="flex items-center gap-2 text-secondary">
+                  <div className="flex items-center gap-2 text-foreground/40">
                     <Building2 className="w-3.5 h-3.5 opacity-40" />
                     {exp.company}
                   </div>
                   <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-foreground/10" />
-                  <div className="flex items-center gap-2 text-secondary">
+                  <div className="flex items-center gap-2 text-foreground/40">
                     <MapPin className="w-3.5 h-3.5 opacity-40" />
                     {exp.location}
                   </div>
@@ -170,11 +170,11 @@ export function Experience() {
                 expandedIndex === i ? "grid-rows-[1fr] opacity-100 pb-10" : "grid-rows-[0fr] opacity-0"
               )}>
                 <div className="overflow-hidden">
-                  <div className="pt-10 border-t border-foreground/5 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                  <div className="pt-10 border-t border-border grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <div className="lg:col-span-7 space-y-10">
                       <div className="space-y-4">
                         <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40 italic">Industrial Observation</p>
-                        <p className="text-lg md:text-xl leading-relaxed font-light text-secondary text-balance">
+                        <p className="text-lg md:text-xl leading-relaxed font-light text-foreground/60 text-balance">
                           {exp.fullDesc}
                         </p>
                       </div>

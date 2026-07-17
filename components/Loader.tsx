@@ -59,7 +59,7 @@ export function Loader({ onCompleteAction }: { onCompleteAction: () => void }) {
         </div>
 
         <div className="flex flex-col items-center gap-2">
-          <h2 className="font-mono text-[10px] tracking-[0.5em] uppercase text-secondary">
+          <h2 className="font-mono text-[10px] tracking-[0.5em] uppercase text-foreground/40">
             Civil Engineer Loading..
           </h2>
           <div className="w-48 h-px bg-border relative overflow-hidden">

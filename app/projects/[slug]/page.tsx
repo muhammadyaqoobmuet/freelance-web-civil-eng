@@ -46,40 +46,40 @@ export default function ProjectPage() {
                   {/* Left: Project Details */}
                   <div className="space-y-14">
                      {/* Back link */}
-                     <Link href="/projects" className="proj-header inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary hover:text-foreground transition-all group">
+                     <Link href="/projects" className="proj-header inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/50 hover:text-foreground transition-all group">
                         <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> All Projects
                      </Link>
-
+ 
                      {/* Title block */}
-                     <div className="proj-header space-y-4 border-b border-foreground/5 pb-10 font-bold">
-                        <div className="flex items-center gap-3 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary opacity-50">
+                     <div className="proj-header space-y-4 border-b border-border pb-10 font-bold">
+                        <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
                            <span>{project.category}</span>
                            <span>·</span>
                            <span>{project.year}</span>
                            <span>·</span>
                            <span>Case Study {String(idx + 1).padStart(2, "0")}</span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-none">
+                        <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-none">
                            {project.title}
                         </h1>
                      </div>
-
+ 
                      {/* Body */}
                      <div className="proj-body space-y-12">
                         {/* Long description */}
                         <div className="space-y-3">
-                           <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Project Overview</p>
-                           <p className="text-base md:text-lg text-secondary leading-relaxed font-light">
+                           <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">Project Overview</p>
+                           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed font-light">
                               {project.longDescription}
                            </p>
                         </div>
-
+ 
                         {/* Tags */}
                         <div className="space-y-3">
-                           <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Keywords</p>
+                           <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">Keywords</p>
                            <div className="flex flex-wrap gap-2">
                               {project.tags.map(tag => (
-                                 <span key={tag} className="text-[9px] font-mono px-3 py-1 border border-foreground/10 rounded-full text-secondary">
+                                 <span key={tag} className="text-[10px] font-mono px-3 py-1 border border-border rounded-full text-foreground/55">
                                     {tag}
                                  </span>
                               ))}
@@ -92,9 +92,9 @@ export default function ProjectPage() {
                               <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40">Project Modules</p>
                               <div className="grid grid-cols-1 gap-4">
                                  {project.subProjects.map((sub: any) => (
-                                    <div key={sub.id} className="p-6 rounded-2xl border border-foreground/5 bg-foreground/5 space-y-2 hover:border-foreground/10 transition-all">
-                                       <h4 className="text-sm font-bold uppercase tracking-tight">{sub.title}</h4>
-                                       <p className="text-xs text-secondary leading-relaxed opacity-70">{sub.desc}</p>
+                                     <div key={sub.id} className="p-6 rounded-2xl border border-border bg-card space-y-2 hover:border-foreground/15 transition-all shadow-soft">
+                                        <h4 className="text-base font-bold uppercase tracking-tight">{sub.title}</h4>
+                                        <p className="text-sm text-foreground/60 leading-relaxed">{sub.desc}</p>
                                     </div>
                                  ))}
                               </div>
@@ -118,7 +118,7 @@ export default function ProjectPage() {
                   </div>
 
                   <div className="lg:sticky lg:top-32 h-fit space-y-6">
-                     <div className="rounded-3xl overflow-hidden border border-foreground/10 bg-zinc-950/50 backdrop-blur-sm relative aspect-4/5 shadow-2xl">
+                      <div className="rounded-3xl overflow-hidden border border-border bg-card relative aspect-4/5 shadow-card">
                         {/* Blueprint Grid Overlay */}
                         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[32px_32px]" />
                         
@@ -130,9 +130,9 @@ export default function ProjectPage() {
                            priority
                         />
                      </div>
-                     <div className="bg-muted/30 rounded-2xl p-4 flex items-center justify-center border border-foreground/5">
-                        <p className="text-[9px] font-mono uppercase tracking-widest opacity-40">High Resolution Layout Preview</p>
-                     </div>
+                      <div className="bg-card rounded-2xl p-4 flex items-center justify-center border border-border">
+                         <p className="text-[9px] font-mono uppercase tracking-widest opacity-40">High Resolution Layout Preview</p>
+                      </div>
                   </div>
 
                </div>
@@ -142,7 +142,7 @@ export default function ProjectPage() {
                   <p className="text-[9px] font-mono uppercase tracking-[0.4em] opacity-40 mb-6">Next project in queue</p>
                   <Link
                      href={`/projects/${next.slug}`}
-                     className="group flex flex-col md:flex-row md:items-center justify-between gap-6 p-10 rounded-[2.5rem] border border-foreground/10 hover:border-foreground/20 bg-muted/20 dark:bg-zinc-900/10 transition-all duration-500 overflow-hidden relative"
+                      className="group flex flex-col md:flex-row md:items-center justify-between gap-6 p-10 rounded-[2.5rem] border border-border hover:border-foreground/15 bg-card transition-all duration-500 overflow-hidden relative shadow-soft"
                   >
                      <div className="relative z-10">
                         <p className="text-[9px] font-mono opacity-40 mb-2 uppercase tracking-widest">{next.category} // {next.year}</p>

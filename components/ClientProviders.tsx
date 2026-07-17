@@ -4,6 +4,7 @@ import * as React from "react"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { Loader } from "@/components/Loader"
 import ArchitecturalBackground from "@/components/ArchitecturalBackground"
+import { SoundProvider } from "@/components/SoundProvider"
 import { cn } from "@/lib/utils"
 
 export function ClientProviders({ children }: { children: React.ReactNode }) {
@@ -16,6 +17,7 @@ export function ClientProviders({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
+      <SoundProvider>
       {loading && <Loader onCompleteAction={() => setLoading(false)} />}
       <ArchitecturalBackground />
       <main className={cn(
@@ -24,6 +26,7 @@ export function ClientProviders({ children }: { children: React.ReactNode }) {
       )}>
         {children}
       </main>
+      </SoundProvider>
     </ThemeProvider>
   )
 }

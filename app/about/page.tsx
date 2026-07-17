@@ -61,16 +61,16 @@ export default function AboutPage() {
             <div className="lg:col-span-7 space-y-10">
               <h1 className="text-6xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.9]">
                 The <br />
-                <span className="font-serif italic font-light text-secondary opacity-40 lowercase">Architectural</span> <br />
-                Engineer.
-              </h1>
-              <div className="w-24 h-px bg-foreground" />
-              <p className="text-xl text-secondary font-light leading-relaxed max-w-xl">
+                 <span className="font-serif italic font-light text-foreground/40 lowercase">Architectural</span> <br />
+                 Engineer.
+               </h1>
+               <div className="w-24 h-px bg-foreground" />
+               <p className="text-xl text-foreground/70 font-light leading-relaxed max-w-xl">
                 I am a Civil Engineering student specializing in structural integrity, construction management, and infrastructure development. My focus lies at the intersection of technical precision and sustainable design.
               </p>
             </div>
             <div className="lg:col-span-5 pt-10 lg:pt-0">
-              <div className="aspect-4/5 relative rounded-2xl overflow-hidden shadow-2xl border border-foreground/5">
+               <div className="aspect-4/5 relative rounded-2xl overflow-hidden shadow-float border border-border">
                 <Image 
                   src="/about-sec-pics/image copy 2.png" 
                   alt="Arslan Javed Professional Work" 
@@ -85,7 +85,7 @@ export default function AboutPage() {
           {/* Education & Objective */}
           <section className="reveal grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5 order-2 lg:order-1">
-              <div className="aspect-square relative rounded-2xl overflow-hidden border border-foreground/5 shadow-xl">
+               <div className="aspect-square relative rounded-2xl overflow-hidden border border-border shadow-float">
                 <Image 
                   src="/about-sec-pics/image.png" 
                   alt="Site Work" 
@@ -96,13 +96,13 @@ export default function AboutPage() {
             </div>
             <div className="lg:col-span-7 order-1 lg:order-2 space-y-12">
               <div className="space-y-6">
-                <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-secondary">Academic Foundation</h2>
+                <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-foreground/40">Academic Foundation</h2>
                 <p className="text-lg font-light leading-relaxed">
                   With a background in Arts and Electrical Engineering, I am currently pursuing a Bachelor&apos;s in Civil Engineering. This multidisciplinary path allows me to approach structural challenges with a unique, holistic perspective.
                 </p>
               </div>
               <div className="space-y-6">
-                <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-secondary text-right lg:text-left">Career Objective</h2>
+                 <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-foreground/40 text-right lg:text-left">Career Objective</h2>
                 <p className="text-lg font-light leading-relaxed text-right lg:text-left">
                   My goal is to become an innovative civil engineer driving the design of resilient high-rise structural systems and sustainable urban infrastructure.
                 </p>
@@ -115,20 +115,20 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold uppercase tracking-tighter text-center">Core Proficiency</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
               <div className="space-y-4">
-                <h3 className="font-bold text-sm uppercase tracking-widest border-b border-foreground/10 pb-2">Analysis</h3>
-                <p className="text-xs text-secondary font-mono leading-relaxed">Structural Analysis // ETABS // Modeling // Design Evaluation</p>
+                 <h3 className="font-bold text-sm uppercase tracking-widest border-b border-border pb-2">Analysis</h3>
+                 <p className="text-sm text-foreground/55 font-mono leading-relaxed">Structural Analysis // ETABS // Modeling // Design Evaluation</p>
               </div>
               <div className="space-y-4">
-                <h3 className="font-bold text-sm uppercase tracking-widest border-b border-foreground/10 pb-2">Technical</h3>
-                <p className="text-xs text-secondary font-mono leading-relaxed">AutoCAD // Quantity Surveying // BOQ // Cost Estimation</p>
+                 <h3 className="font-bold text-sm uppercase tracking-widest border-b border-border pb-2">Technical</h3>
+                 <p className="text-sm text-foreground/55 font-mono leading-relaxed">AutoCAD // Quantity Surveying // BOQ // Cost Estimation</p>
               </div>
               <div className="space-y-4">
-                <h3 className="font-bold text-sm uppercase tracking-widest border-b border-foreground/10 pb-2">Management</h3>
-                <p className="text-xs text-secondary font-mono leading-relaxed">Construction Planning // Feasibility // Project Reporting</p>
+                 <h3 className="font-bold text-sm uppercase tracking-widest border-b border-border pb-2">Management</h3>
+                 <p className="text-sm text-foreground/55 font-mono leading-relaxed">Construction Planning // Feasibility // Project Reporting</p>
               </div>
               <div className="space-y-4">
-                <h3 className="font-bold text-sm uppercase tracking-widest border-b border-foreground/10 pb-2">Human</h3>
-                <p className="text-xs text-secondary font-mono leading-relaxed">Communication // Leadership // Analytical Thinking // Teamwork</p>
+                 <h3 className="font-bold text-sm uppercase tracking-widest border-b border-border pb-2">Human</h3>
+                 <p className="text-sm text-foreground/55 font-mono leading-relaxed">Communication // Leadership // Analytical Thinking // Teamwork</p>
               </div>
             </div>
           </section>
@@ -137,8 +137,8 @@ export default function AboutPage() {
           <section className="reveal grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4 space-y-8">
               <h2 className="text-4xl font-bold uppercase tracking-tighter">Experience</h2>
-              <p className="text-sm text-secondary font-light">Valuable exposure across NHA, Emaar, and FWO.</p>
-              <div className="aspect-ratio relative rounded-2xl overflow-hidden border border-foreground/5 hidden lg:block">
+               <p className="text-sm text-foreground/55 font-light">Valuable exposure across NHA, Emaar, and FWO.</p>
+                 <div className="aspect-ratio relative rounded-2xl overflow-hidden border border-border shadow-soft hidden lg:block">
                 <Image 
                   src="/about-sec-pics/image copy.png" 
                   alt="Internship Site" 
@@ -153,10 +153,10 @@ export default function AboutPage() {
                 { company: "Emaar", role: "Site Operations Internship" },
                 { company: "Frontier Works Organization", role: "Construction Management Internship" }
               ].map((item, i) => (
-                <div key={i} className="flex justify-between items-end border-b border-foreground/5 pb-4 group">
+                <div key={i} className="flex justify-between items-end border-b border-border pb-4 group">
                   <div className="space-y-1">
-                    <h4 className="text-xl font-bold uppercase group-hover:tracking-wider transition-all">{item.company}</h4>
-                    <p className="text-[10px] font-mono uppercase text-secondary">{item.role}</p>
+                     <h4 className="text-xl font-bold uppercase group-hover:tracking-wider transition-all">{item.company}</h4>
+                     <p className="text-[11px] font-mono uppercase text-foreground/50">{item.role}</p>
                   </div>
                   <ChevronRight className="w-4 h-4 opacity-10 group-hover:opacity-100 transition-opacity" />
                 </div>
@@ -172,25 +172,25 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               <div className="lg:col-span-8 space-y-8">
-                <div className="p-8 bg-foreground/5 rounded-2xl border border-foreground/5 space-y-4">
-                  <h4 className="text-sm font-mono uppercase tracking-[0.3em] opacity-40 italic">Key Structural Study</h4>
-                  <p className="text-xl font-bold leading-tight">
-                    Performance Evaluation of Shear Wall, Core, Outrigger, and Diagrid Systems in Tall Buildings using ETABS.
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                   <div className="p-6 border border-foreground/10 rounded-2xl space-y-3">
-                     <h5 className="text-[10px] font-mono uppercase mb-2">Quantity Surveying</h5>
-                     <p className="text-sm font-light leading-snug">Comprehensive estimation for residential projects ranging from 2,000 to 10,000 sq.ft lux villas.</p>
-                   </div>
-                   <div className="p-6 border border-foreground/10 rounded-2xl space-y-3">
-                     <h5 className="text-[10px] font-mono uppercase mb-2">Feasibility</h5>
-                     <p className="text-sm font-light leading-snug">BRI Infrastructure studies and PC-1/PC-2 development for 1320 MW power plants in Karachi.</p>
-                   </div>
-                </div>
+                 <div className="p-8 card rounded-2xl space-y-4">
+                   <h4 className="text-sm font-mono uppercase tracking-[0.3em] opacity-40 italic">Key Structural Study</h4>
+                   <p className="text-xl font-bold leading-tight">
+                     Performance Evaluation of Shear Wall, Core, Outrigger, and Diagrid Systems in Tall Buildings using ETABS.
+                   </p>
+                 </div>
+                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div className="p-6 card rounded-2xl space-y-3">
+                       <h5 className="text-[11px] font-mono uppercase mb-2 text-foreground/40">Quantity Surveying</h5>
+                       <p className="text-sm font-light leading-snug text-foreground/70">Comprehensive estimation for residential projects ranging from 2,000 to 10,000 sq.ft lux villas.</p>
+                    </div>
+                    <div className="p-6 card rounded-2xl space-y-3">
+                       <h5 className="text-[11px] font-mono uppercase mb-2 text-foreground/40">Feasibility</h5>
+                       <p className="text-sm font-light leading-snug text-foreground/70">BRI Infrastructure studies and PC-1/PC-2 development for 1320 MW power plants in Karachi.</p>
+                    </div>
+                 </div>
               </div>
               <div className="lg:col-span-4">
-                <div className="aspect-3/4 relative rounded-2xl overflow-hidden shadow-xl border border-foreground/5 grayscale hover:grayscale-0 transition-all duration-700">
+                 <div className="aspect-3/4 relative rounded-2xl overflow-hidden shadow-float border border-border grayscale hover:grayscale-0 transition-all duration-700">
                   <Image 
                     src="/about-sec-pics/image copy 3.png" 
                     alt="Technical Analysis" 
@@ -203,7 +203,7 @@ export default function AboutPage() {
           </section>
 
           {/* Footer Link */}
-          <section className="reveal py-20 border-t border-foreground/5 text-center space-y-8">
+          <section className="reveal py-20 border-t border-border text-center space-y-8">
             <a 
               href="/Arslan_Javed_CV.pdf" 
               download

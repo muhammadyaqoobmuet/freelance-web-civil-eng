@@ -53,7 +53,7 @@ export function Plans() {
     <section className="py-24 px-6 relative bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 space-y-4 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
             <Ruler className="w-3 h-3" />
             Technical Blueprint Archive
           </div>
@@ -66,38 +66,41 @@ export function Plans() {
           {plans.map((plan, i) => (
             <div
               key={plan.ref}
-              className="plan-card group relative bg-muted/20 dark:bg-zinc-900/40 border border-foreground/5 rounded-4xl p-8 hover:border-foreground/20 transition-all duration-700 overflow-hidden opacity-100 transform-none"
+              className="plan-card group relative card rounded-4xl p-8 pt-10 hover:border-foreground/20 hover:shadow-card transition-all duration-700 overflow-hidden"
+              data-cuelume-hover="sparkle"
             >
               {/* Internal Grid Pattern */}
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none group-hover:opacity-[0.06] transition-opacity">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]" />
               </div>
 
-              <div className="relative z-10 space-y-6">
+              <div className="card-dots absolute top-4 left-8 right-8 h-2 rounded-full opacity-70" />
+
+              <div className="relative z-10 space-y-6 pt-4">
                 <div className="flex items-start justify-between">
                   <div className="w-12 h-12 rounded-2xl bg-foreground/5 flex items-center justify-center group-hover:bg-foreground/10 transition-colors">
-                    <Compass className="w-6 h-6 opacity-30 group-hover:opacity-100 transition-all group-hover:rotate-45" />
+                    <Compass className="w-6 h-6 opacity-40 group-hover:opacity-100 transition-all group-hover:rotate-45" />
                   </div>
                   <span className="text-[9px] font-mono uppercase tracking-[0.2em] font-bold opacity-30">{plan.ref}</span>
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-[10px] font-mono uppercase tracking-widest text-secondary opacity-50">{plan.type}</p>
-                  <h3 className="text-xl font-bold tracking-tight uppercase leading-tight group-hover:text-primary transition-colors">
+                  <p className="text-[10px] font-mono uppercase tracking-widest text-foreground/40">{plan.type}</p>
+                  <h3 className="text-2xl font-bold tracking-tight uppercase leading-tight group-hover:text-primary transition-colors">
                     {plan.title}
                   </h3>
                 </div>
 
-                <p className="text-xs leading-relaxed opacity-60 font-light line-clamp-2">
+                <p className="text-sm leading-relaxed text-foreground/60 font-light line-clamp-2">
                   {plan.desc}
                 </p>
 
-                <div className="pt-6 border-t border-foreground/5 flex items-center justify-between">
+                <div className="pt-6 border-t border-border flex items-center justify-between">
                   <div className="flex gap-4">
-                    <button className="flex items-center gap-2 text-[9px] font-mono uppercase font-bold hover:text-secondary transition-colors">
+                    <button className="flex items-center gap-2 text-[9px] font-mono uppercase font-bold hover:text-foreground transition-colors">
                       <Maximize2 className="w-3 h-3" /> View Detail
                     </button>
-                    <button className="flex items-center gap-2 text-[9px] font-mono uppercase font-bold hover:text-secondary transition-colors">
+                    <button className="flex items-center gap-2 text-[9px] font-mono uppercase font-bold hover:text-foreground transition-colors">
                       <FileText className="w-3 h-3" /> PDF Info
                     </button>
                   </div>

@@ -34,7 +34,7 @@ export function Projects() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-14">
           <div className="space-y-2">
-            <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">Portfolio</p>
+            <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">Portfolio</p>
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-[0.9]">Selected Work</h2>
           </div>
           <Link
@@ -51,7 +51,8 @@ export function Projects() {
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
-              className="project-card group block rounded-2xl border border-foreground/10 bg-muted/20 dark:bg-zinc-900/30 overflow-hidden hover:border-foreground/20 transition-all duration-300"
+                className="project-card group card block rounded-2xl overflow-hidden hover:border-foreground/15 hover:shadow-card transition-all duration-300"
+                data-cuelume-hover="sparkle"
             >
               {/* Full-width Image */}
               <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted">
@@ -68,31 +69,31 @@ export function Projects() {
               </div>
 
               {/* Info */}
-              <div className="p-6 space-y-4">
-                {/* Title Row */}
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-[9px] font-mono uppercase tracking-widest text-secondary opacity-50 mb-1">
-                      {project.category} · {project.year}
-                    </p>
-                    <h3 className="text-lg md:text-xl font-black tracking-tight uppercase leading-tight">
-                      {project.title}
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-xs text-secondary leading-relaxed line-clamp-2 opacity-70">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {project.tags.map(tag => (
-                    <span
-                      key={tag}
-                      className="text-[8px] font-mono px-2 py-0.5 border border-foreground/10 rounded-full text-secondary"
-                    >
+               <div className="p-6 md:p-8 space-y-4">
+                 {/* Title Row */}
+                 <div className="flex items-start justify-between gap-4">
+                   <div>
+                     <p className="text-[10px] font-mono uppercase tracking-widest text-foreground/40 mb-1">
+                       {project.category} · {project.year}
+                     </p>
+                     <h3 className="text-xl md:text-2xl font-black tracking-tight uppercase leading-tight">
+                       {project.title}
+                     </h3>
+                   </div>
+                 </div>
+ 
+                 {/* Description */}
+                 <p className="text-sm md:text-base text-foreground/60 leading-relaxed line-clamp-2">
+                   {project.description}
+                 </p>
+ 
+                 {/* Tags */}
+                 <div className="flex flex-wrap gap-1.5 pt-1">
+                   {project.tags.map(tag => (
+                     <span
+                       key={tag}
+                       className="text-[9px] font-mono px-2.5 py-1 border border-border rounded-full text-foreground/50"
+                     >
                       {tag}
                     </span>
                   ))}

@@ -63,7 +63,7 @@ export function Certificates() {
     <section id="certificates" ref={container} className="py-24 px-6 relative bg-background/50">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16 space-y-4 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
             <Award className="w-3 h-3" />
             Technical Validation
           </div>
@@ -76,9 +76,11 @@ export function Certificates() {
           {certifications.map((cert, i) => (
             <div
               key={i}
-              className="cert-card group relative bg-muted/40 dark:bg-zinc-900/40 border border-foreground/10 rounded-[1.5rem] p-8 md:p-10 transition-all duration-500 hover:border-foreground/20 overflow-hidden"
+              className="cert-card group relative card rounded-[1.5rem] p-8 md:p-10 pt-12 transition-all duration-500 hover:border-foreground/20 hover:shadow-card overflow-hidden"
+              data-cuelume-hover="sparkle"
             >
-              <div className="relative z-10 space-y-6">
+              <div className="card-dots absolute top-4 left-8 right-8 h-2 rounded-full opacity-70 z-10" />
+              <div className="relative z-10 space-y-6 pt-2">
                 <div className="flex items-start justify-between">
                   <div className="w-10 h-10 rounded-xl bg-foreground/5 flex items-center justify-center">
                     <cert.icon className="w-5 h-5 opacity-40" />
@@ -89,28 +91,28 @@ export function Certificates() {
                 </div>
 
                 <div className="space-y-3">
-                  <h3 className="text-xl md:text-2xl font-black tracking-tighter leading-tight uppercase">
+                  <h3 className="text-2xl md:text-3xl font-black tracking-tighter leading-tight uppercase">
                     {cert.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-[9px] font-mono opacity-40">
+                  <div className="flex items-center gap-2 text-[9px] font-mono text-foreground/40">
                     <Sparkles className="w-3 h-3" />
                     {cert.issuer} {"//"} {cert.date}
                   </div>
                 </div>
 
-                <p className="text-xs leading-relaxed opacity-60 line-clamp-3">
+                <p className="text-sm leading-relaxed text-foreground/60 line-clamp-3">
                   {cert.desc}
                 </p>
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {cert.tags.map(tag => (
-                    <span key={tag} className="px-2 py-0.5 border border-foreground/10 rounded-full text-[7px] font-mono uppercase tracking-widest opacity-60">
+                    <span key={tag} className="px-2.5 py-1 border border-border rounded-full text-[9px] font-mono uppercase tracking-widest text-foreground/50">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="pt-6 border-t border-foreground/5 flex items-center justify-between">
+                <div className="pt-6 border-t border-border flex items-center justify-between">
                   <a
                     href={cert.image}
                     target="_blank"

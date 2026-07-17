@@ -31,7 +31,7 @@ export function Contact() {
 
         {/* Simple Clean Header */}
         <div className="reveal space-y-4 text-center">
-          <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-secondary">Available for new opportunities</p>
+          <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-foreground/40">Available for new opportunities</p>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.9]">
             Let&apos;s Connect <br /> <span className="font-serif italic font-light lowercase opacity-30">Reach Out.</span>
           </h2>
@@ -89,35 +89,35 @@ export function Contact() {
           <div className="reveal space-y-10">
             <h3 className="text-xs font-mono uppercase tracking-[0.4em] opacity-40">Digital Presence</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <a href="https://www.linkedin.com/in/arslan-javed-jamali-448744280/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-foreground/5 border border-foreground/5 hover:border-foreground/20 transition-all group">
+              <a href="https://www.linkedin.com/in/arslan-javed-jamali-448744280/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-card border border-border hover:border-foreground/20 hover:shadow-soft transition-all group">
                 <div className="flex items-center gap-3">
                   <Share2 className="w-4 h-4 opacity-40" />
                   <span className="text-sm font-bold uppercase tracking-widest">LinkedIn</span>
                 </div>
                 <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-40 transition-opacity" />
               </a>
-              <a href="https://www.upwork.com/freelancers/arslan_civil_56" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-foreground/5 border border-foreground/5 hover:border-foreground/20 transition-all group">
+              <a href="https://www.upwork.com/freelancers/arslan_civil_56" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-card border border-border hover:border-foreground/20 hover:shadow-soft transition-all group">
                 <div className="flex items-center gap-3">
                   <Briefcase className="w-4 h-4 opacity-40" />
                   <span className="text-sm font-bold uppercase tracking-widest">Upwork</span>
                 </div>
                 <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-40 transition-opacity" />
               </a>
-              <a href="https://www.fiverr.com/pe/BR94KRW" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-foreground/5 border border-foreground/5 hover:border-foreground/20 transition-all group">
+              <a href="https://www.fiverr.com/pe/BR94KRW" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-card border border-border hover:border-foreground/20 hover:shadow-soft transition-all group">
                 <div className="flex items-center gap-3">
                   <ExternalLink className="w-4 h-4 opacity-40" />
                   <span className="text-sm font-bold uppercase tracking-widest">Fiverr</span>
                 </div>
                 <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-40 transition-opacity" />
               </a>
-              <a href="#" className="flex items-center justify-between p-6 rounded-2xl bg-foreground/5 border border-foreground/5 hover:border-foreground/20 transition-all group">
+              <a href="#" className="flex items-center justify-between p-6 rounded-2xl bg-card border border-border hover:border-foreground/20 hover:shadow-soft transition-all group">
                 <div className="flex items-center gap-3">
                   <Share2 className="w-4 h-4 opacity-40" />
                   <span className="text-sm font-bold uppercase tracking-widest">Facebook</span>
                 </div>
                 <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-40 transition-opacity" />
               </a>
-              <a href="#" className="flex items-center justify-between p-6 rounded-2xl bg-foreground/5 border border-foreground/5 hover:border-foreground/20 transition-all group">
+              <a href="#" className="flex items-center justify-between p-6 rounded-2xl bg-card border border-border hover:border-foreground/20 hover:shadow-soft transition-all group">
                 <div className="flex items-center gap-3">
                   <Share2 className="w-4 h-4 opacity-40" />
                   <span className="text-sm font-bold uppercase tracking-widest">Instagram</span>

@@ -27,11 +27,11 @@ export default function ContactPage() {
           
           {/* Header */}
           <div className="archive-header space-y-8 mb-14">
-            <Link href="/" className="inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-secondary hover:text-foreground transition-all group">
+            <Link href="/" className="inline-flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.4em] text-foreground/40 hover:text-foreground transition-all group">
               <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> Home
             </Link>
             <div className="space-y-3">
-              <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+              <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
                 <Mail className="w-3.5 h-3.5" />
                 Get in touch
               </div>

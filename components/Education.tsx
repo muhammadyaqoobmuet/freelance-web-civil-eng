@@ -87,7 +87,7 @@ export function Education() {
         {/* Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+            <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
               <BookOpen className="w-3 h-3" />
               Academic Background
             </div>
@@ -108,26 +108,26 @@ export function Education() {
         </div>
 
         {/* Degrees List */}
-        <div className="edu-list rounded-2xl border border-foreground/10 overflow-hidden divide-y divide-foreground/5">
-          {degrees.map((d, i) => (
+        <div className="edu-list rounded-2xl border border-border overflow-hidden divide-y divide-border card">
+          {degrees.map((d, idx) => (
             <div
-              key={i}
-              className="edu-row flex items-center gap-4 sm:gap-5 px-5 sm:px-6 py-4 sm:py-5 bg-muted/10 dark:bg-zinc-900/20 hover:bg-muted/30 dark:hover:bg-zinc-900/40 transition-colors duration-200"
+              key={idx}
+              className="edu-row flex items-center gap-4 sm:gap-5 px-5 sm:px-6 py-5 sm:py-6 hover:bg-muted transition-colors duration-200"
             >
               {/* Index */}
-              <span className="shrink-0 w-8 h-8 rounded-lg bg-foreground/5 flex items-center justify-center text-[9px] font-mono font-bold opacity-30">
-                {String(i + 1).padStart(2, "0")}
+              <span className="shrink-0 w-9 h-9 rounded-lg bg-foreground/5 flex items-center justify-center text-[10px] font-mono font-bold opacity-40">
+                {String(idx + 1).padStart(2, "0")}
               </span>
 
               {/* Icon */}
-              <div className="shrink-0 w-9 h-9 rounded-xl bg-foreground/5 hidden sm:flex items-center justify-center">
-                <GraduationCap className="w-4 h-4 opacity-30" />
+              <div className="shrink-0 w-10 h-10 rounded-xl bg-foreground/5 hidden sm:flex items-center justify-center">
+                <GraduationCap className="w-5 h-5 opacity-40" />
               </div>
 
               {/* Info */}
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold tracking-tight leading-snug">{d.title}</p>
-                <p className="text-[10px] text-secondary opacity-60 truncate mt-0.5">{d.institution}</p>
+                <p className="text-base font-bold tracking-tight leading-snug">{d.title}</p>
+                <p className="text-[11px] text-foreground/50 truncate mt-0.5">{d.institution}</p>
               </div>
 
               {/* Right side */}

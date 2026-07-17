@@ -21,6 +21,7 @@ export function ThemeToggle() {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="relative p-2 rounded-lg border border-border bg-muted/50 hover:bg-muted transition-colors cursor-pointer"
       aria-label="Toggle theme"
+      data-cuelume-toggle="toggle"
     >
       <div className="relative w-5 h-5">
         <motion.div

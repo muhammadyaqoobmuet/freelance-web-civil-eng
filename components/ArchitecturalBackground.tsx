@@ -42,7 +42,7 @@ const ArchitecturalBackground = () => {
       </div>
 
       {/* Decorative technical line in corner */}
-      <div className="absolute top-10 right-10 w-32 h-32 border-t border-r border-foreground/5 pointer-events-none" />
+      <div className="absolute top-10 right-10 w-32 h-32 border-t border-r border-border pointer-events-none" />
     </div>
   );
 };

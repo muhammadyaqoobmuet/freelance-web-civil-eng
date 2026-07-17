@@ -12,17 +12,22 @@
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-card: var(--card);
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
-  --primary: #000000;
-  --secondary: #71717a;
+  --foreground: #0a0a0a;
+  --primary: #0a0a0a;
+  --secondary: #52525b;
   --accent: #27272a;
-  --muted: #f4f4f5;
-  --border: #e4e4e7;
-  --grid: rgba(0, 0, 0, 0.05);
+  --muted: #fafafa;
+  --card: #fcfcfc;
+  --border: #e8e8e8;
+  --ring: rgba(10, 10, 10, 0.06);
+  --shadow-color: 220 3% 35%;
+  --shadow-strength: 1%;
+  --grid: rgba(0, 0, 0, 0.04);
 }
 
 .dark {
@@ -32,7 +37,9 @@
   --secondary: #a1a1aa;
   --accent: #d4d4d8;
   --muted: #18181b;
+  --card: #0a0a0a;
   --border: #27272a;
+  --ring: rgba(255, 255, 255, 0.08);
   --grid: rgba(255, 255, 255, 0.08);
 }
 
@@ -63,12 +70,68 @@
   }
 
   .glass {
-    background: rgba(var(--background), 0.8);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
 
+  .dark .glass {
+    background: rgba(10, 10, 10, 0.85);
+  }
+
   .bw-gradient {
     background: linear-gradient(to bottom, var(--background), var(--muted));
+  }
+
+  /* Sleek card: off-white surface, inner shadow, subtle border, soft drop shadow */
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    box-shadow:
+      inset 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+      0 1px 2px -1px rgba(10, 10, 10, 0.04),
+      0 10px 30px -12px rgba(10, 10, 10, 0.12);
+  }
+
+  .dark .card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    box-shadow:
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.03),
+      0 1px 2px -1px rgba(0, 0, 0, 0.6),
+      0 16px 40px -12px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Decorative dotted divider for card tops */
+  .card-dots {
+    background-image: radial-gradient(var(--border) 1.5px, transparent 1.5px);
+    background-size: 10px 10px;
+  }
+
+  /* Sleek minimalist shadow system */
+  .shadow-soft {
+    box-shadow:
+      0 1px 2px -1px rgb(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+      0 8px 24px -8px rgb(var(--shadow-color) / calc(var(--shadow-strength) + 8%));
+  }
+
+  .shadow-card {
+    box-shadow:
+      0 1px 3px -1px rgb(var(--shadow-color) / 8%),
+      0 12px 32px -12px rgb(var(--shadow-color) / 14%);
+  }
+
+  .shadow-float {
+    box-shadow:
+      0 2px 6px -2px rgb(var(--shadow-color) / 8%),
+      0 18px 40px -12px rgb(var(--shadow-color) / 18%);
+  }
+
+  .dark .shadow-soft,
+  .dark .shadow-card,
+  .dark .shadow-float {
+    box-shadow:
+      0 1px 2px -1px rgba(0, 0, 0, 0.6),
+      0 16px 40px -12px rgba(0, 0, 0, 0.7);
   }
 }

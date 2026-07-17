@@ -15,19 +15,20 @@ export function Footer() {
            <div className="w-10 h-10 bg-foreground flex items-center justify-center rounded-full mx-auto md:mx-0">
               <span className="font-mono text-[10px] font-bold text-background">AJ</span>
            </div>
-           <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-secondary">
+           <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-foreground/40">
              Arslan Javed // Structural Civil Engineer
            </p>
         </div>
 
         <div className="flex flex-col items-center md:items-end gap-6">
-           <button 
-             onClick={scrollToTop}
-             className="w-12 h-12 border border-border rounded-full flex items-center justify-center hover:bg-foreground hover:text-background transition-all duration-500 group"
-           >
+            <button 
+              onClick={scrollToTop}
+              data-cuelume-press="press"
+              className="w-12 h-12 border border-border rounded-full flex items-center justify-center hover:bg-foreground hover:text-background transition-all duration-500 group"
+            >
               <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
            </button>
-           <p className="text-[10px] font-mono text-secondary/50 uppercase tracking-widest">
+           <p className="text-[10px] font-mono text-foreground/55 uppercase tracking-widest">
               Design & Development © 2024
            </p>
         </div>
